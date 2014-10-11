@@ -1,0 +1,30 @@
+<div class="action_links">
+	<% actions.each do |action| %>
+		<% case action %>
+		<% when 'list' %>
+			<%= link_to("<< List", {:controller => controller, :action => 'index'}, :class => 'action_') %>
+		<% when 'new' %>
+			<% if session[:user_role] == "admin" %>
+				<%= link_to("New", {:controller => controller, :action => 'new'}, :class => 'action_') %>
+			<% end %>
+		<% when 'show' %>
+			<%= link_to("Show", {:controller => controller, :action => "show", :id => id}, :class => "action_") %>
+		<% when 'edit' %>
+			<%= link_to("Edit", {:controller => controller, :action => 'edit', :id => id}, :class => 'action_') %>
+		<% when 'delete' %>
+			<% if session[:user_role] == "admin" %>
+				<%= link_to("Delete", {:controller => controller, :action => 'delete', :id => id}, :class => "action_") %>
+			<% end %>
+
+		<!-- The following links are hard-coded to specific controllers -->
+		<% when 'home' %>
+			<%= link_to("Home", {:controller => 'access', :action => 'index'}, :class => 'action_') %>
+		<% when 'owners' %>
+			<%= link_to("Owners", {:controller => 'owners', :action => 'index'}, :class => 'action_') %>
+		<% when 'events' %>
+			<%= link_to("Events", {:controller => 'events', :action => 'index'}, {:class => 'action_', "data-no-turbolink" => true}) %>
+		<% when 'users' %>
+			<%= link_to("Users", {:controller => 'users', :action => 'index'}, :class => 'action_') %>
+		<% end %>
+	<% end %>
+</div>

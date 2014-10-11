@@ -1,0 +1,29 @@
+<% @page_title = "Edit User" %>
+
+<div class="menu">
+	<%= render(:partial => "shared/action_links", :locals => {:id => @user.id, :controller => "users", :actions => ["list"]}) %>
+</div>
+
+<%= form_for(:user, :url => {:action => 'setpwd', :id => @user.id}) do |i| %>
+  <div class="user_edit">
+    <h2>Reset User Password</h2>
+    <div class="data_edit center">
+		<%= error_messages_for(@user) %>
+		<%= i.label(:password, "Temporary Password") %>
+		<%= i.password_field(:password) %>
+		<%= i.label(:password_confirmation, "Confirm Password") %>
+		<%= i.password_field(:password_confirmation) %>
+		<%= i.hidden_field(:expiry) %>
+	</div>
+  </div>
+  <%= submit_tag("Save", :class => "center") %>
+<% end %>
+<hr/>
+
+<div class="debug">
+	USER DATA<br/>
+	<%= @user.inspect %> <!-- View parameters for the page -->
+	<hr/>
+	PARAMS DATA<br/>
+	<%= params.inspect %> <!-- View parameters for the page -->
+</div>

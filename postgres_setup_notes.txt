@@ -1,0 +1,68 @@
+To set up with postgres spatial and to create the schema files using rake, I make the following configuration changes:
+(Refer to http://www.waratuman.com/2012/10/26/postgis_and_rails/)
+(Refer to https://github.com/rgeo/activerecord-postgis-adapter)
+
+1) Download and install postgres and add the additional spatial plugin
+	If adding the spatial plugin after, use the stack builder utility provided.
+	Create a new database that is spatially enabled
+	Create a new server connection for the rails application to use
+2) Reinstall the rails 'pg' gem (may not be necessary, but was suggested to do so online)
+3) Install the gems 'rgeo' and 'activerecord-postgis-adapter'
+4) Add/check for the following lines to the Gemfile:
+	gem 'pg'
+	gem 'rgeo'
+	gem 'activerecord-postgis-adapter'
+
+	Note: The line "gem 'pg'" was already in the file as I indicated postgres as the database type when I created the project.
+5) Add the following line to the config/application.rb file:
+	require 'active_record/connection_adapters/postgis_adapter/railtie'
+6) Add/modify the following lines in the database.yml file:
+	  adapter: postgis
+  	  postgis_extension: postgis
+  	  schema_search_path: public,postgis
+  	  script_dir: "<your path to the postgis plugin directory>/postgis-2.1"
+  	  username: drivewhere
+  	  password: <password>
+  	  su_username: drivewhere_su
+  	  su_password: <password>
+
+After this, I was able to run: "rake db:schema:dump" without error.
+
+
+------------------------------------------------
+Cheat Sheet for MySql and psql command line:
+------------------------------------------------
+connect to server:
+	$ mysql -u root -prootpassword
+
+	$ psql
+
+list databases:
+	mysql> show databases;
+
+	postgres=# \l
+
+switch databases:
+	mysql> use ocdp;
+
+	postgres=# \c ocdp
+
+show tables:
+	mysql> show tables;
+
+	ocdp=# \dt
+
+create database:
+	mysql> create database foo;
+
+	postgres=# create database foo;
+
+drop database:
+	mysql> drop database foo;
+
+	postgres=# drop database foo;
+
+quit:
+	mysql> quit
+
+	postgres=# \q

@@ -1,0 +1,54 @@
+// Place all the styles related to the Access controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login {
+	width: 500px;
+	margin: 0 auto;
+/*	border: 1px solid black;*/
+
+	label {
+		float: left;
+		text-align: right;
+		padding-right: .5em;
+		width: 8em;
+	}
+	label:after { 
+		content: ":";
+	}
+
+
+	input:not([type=submit]), select, textarea {
+		display: block;
+		margin: 4px 0;
+		width: 20em;
+	}
+
+	input[type=submit],
+	button {
+		display: block;
+		width: 150px;
+		margin: 5px auto;
+	}
+
+	ul {
+		margin-top: 3em;
+		li {
+			list-style-type: none;
+		}
+	}
+}
+
+.main_page {	
+	.choices {
+		text-align: center;
+		a {
+			margin: 5px 0;
+			padding: 5px 0;
+			width: 200px;
+		}
+		ul {
+			padding: 0;
+		}
+	}
+}

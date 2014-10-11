@@ -1,0 +1,36 @@
+<% @page_title = "Main Menu" %>
+
+<div class="main_page">
+	<h2>Main Menu</h2>
+	<div class="choices">
+		<ul>
+			<% case session[:user_role] %>
+			<% when "admin" %>
+				<!-- 'data-no-turbolink' forces scripts to reload. Had problem getting google api loaded. -->
+				<li><%= link_to("Manage Events", {:controller => "events"}, {:class => "linkBtn", "data-no-turbolink" => true}) %></li>
+				<li><%= link_to("Manage Owners", {:controller => 'owners'}, {:class => "linkBtn"}) %></li>
+				<li><%= link_to("Manage Users", {:controller => "users"}, {:class => "linkBtn"}) %></li>
+			<% when "owner" %>
+				<!-- 'data-no-turbolink' forces scripts to reload. Had problem getting google api loaded. -->
+				<li><%= link_to("Manage Events", {:controller => "events"}, {:class => "linkBtn", "data-no-turbolink" => true}) %></li>
+				<li><%= link_to("Manage Account", {:controller => "owners", :action => "show"}, {:class => "linkBtn"}) %></li>
+			<% when "reviewer" %>
+				<li><%= link_to("Manage Events", {:controller => "events"}, {:class => "linkBtn", "data-no-turbolink" => true}) %></li>
+			<% when "dataentry" %>
+				<li><%= link_to("Manage Events", {:controller => "events"}, {:class => "linkBtn", "data-no-turbolink" => true}) %></li>
+			<% end %>
+			<li><%= link_to("Change Password", {:controller => "users", :action => 'changepwd'}, {:class => "linkBtn"}) %></li>
+			<li><%= link_to("Logout", {:action => 'logout'}, {:class => "linkBtn"}) %></li>
+		</ul>
+	</div>
+</div>
+
+<div class="debug">
+	<hr/>
+	User Name: <%= session[:user_name] %><br/>
+	User ID: <%= session[:user_id] %><br/>
+	User Role: <%= session[:user_role] %>
+	<hr/>
+	PARAMS DATA<br/>
+	<%= params.inspect %> <!-- View parameters for the page -->
+</div>

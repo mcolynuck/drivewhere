@@ -1,0 +1,35 @@
+<% @page_title = "Change User Password" %>
+
+<div class="menu">
+	<%= render(:partial => "shared/action_links", :locals => {:id => @user.id, :controller => "users", :actions => ["home"]}) %>
+</div>
+
+<%= form_for(:user, :url => {:action => 'setpwd', :id => @user.id}) do |i| %>
+  <div class="user_chgpwd center">
+    <h2>Change User Password</h2>
+	<%= error_messages_for(@user) %>
+    <div class="data_edit width_50_precent center">
+    	<ul>
+    		<li>
+    			<%= i.label(:password, "New Password") %>
+				<%= i.password_field(:password) %>
+			</li>
+			<li>
+				<%= i.label(:password_confirmation, "Confirm Password") %>
+				<%= i.password_field(:password_confirmation) %>
+			</li>
+		</ul>
+		<%= i.hidden_field(:expiry) %>
+	</div>
+  </div>
+  <%= submit_tag("Save", :class => "center") %>
+<% end %>
+
+<div class="debug">
+	<hr/>
+	USER DATA<br/>
+	<%= @user.inspect %>
+	<hr/>
+	PARAMS DATA<br/>
+	<%= params.inspect %>
+</div>

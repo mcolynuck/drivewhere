@@ -1,0 +1,274 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// PIXELS TO PERCENTAGES 
+// $target: the desired font size for the element
+// $parent: the targets parent element font size (default: 16)
+//------------------------------------------
+@function px_percent($target, $parent: 16) {
+  @return percentage($target / $parent);
+}
+
+body {
+    font: normal 12px verdana;
+}
+
+h2 { 
+	text-align: center; 
+	color: black;
+	margin: 1em 0 1em 0;
+/*	background-color: rgb(105, 105, 105);*/
+}
+
+.hidden { display: none !important; }
+
+.debug { display: none; }
+
+#flash_div {
+	margin-bottom: .5em;
+	.error {
+		background-color: red;
+		color: white;
+		padding: .25em 1em;
+		&:before {
+			content: "ERROR: ";
+			font-weight: bold;
+		}
+	}
+	.warning {
+		background-color: rgb(255, 250, 140);
+		color: black;
+		padding: .25em 1em;
+		&:before {
+			content: "WARNING: ";
+			font-weight: bold;
+		}
+	}
+	.notice {
+		background-color: rgb(190, 239, 255);
+		color: black;
+		padding: .25em 1em;
+		&:before {
+			content: "NOTICE: ";
+			font-weight: bold;
+		}
+	}	
+}
+
+#content {
+	clear: both;
+}
+
+.banner {
+	width: 100%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+/*	border-bottom: 1px solid black;
+	padding-bottom: 1px;
+	margin-bottom: 1em; */
+}
+
+$menu_height: .5em;
+.menu {
+	.action_links {
+		background-color: lightgray;
+		padding: $menu_height 0;
+		.action_ {
+			color: black;
+			font-weight: bold;
+			text-decoration: none;
+			padding: $menu_height 1em;
+			&:hover {
+				background-color: rgb(233, 233, 233);
+			}
+		}
+	}
+}
+
+
+.login_as {		/* Msg of who you are logged in as */
+	float: right;
+	width: 500px;
+	height: 1em;
+	margin-top: 2em;
+}
+
+
+label {
+	float: left;
+	text-align: right;
+	padding-right: .5em;
+	width: 9em;
+
+	&:after { 
+		content: ":";
+	}
+}
+
+.width_50_precent { 
+	width: 50%; 
+}
+
+.width_150 {
+	width: 150px;
+}
+
+.width_250 {
+	width: 250px;
+}
+
+.center {
+	margin: auto;
+}
+
+input:not([type=submit]), textarea, select {
+	margin: 4px 0;
+	width: 20em;
+/*	display: inline-block;*/
+	display: block;
+	*display: block;
+	zoom: 1;
+}
+
+input[type=checkbox] {
+	width: 1em;
+	display: inline;
+}
+
+input[type=submit], button {
+	display: block;
+	min-width: 6px;
+	padding: 2px 3em;
+}
+
+ul li {
+	list-style-type: none;
+	margin-bottom: .5em;
+}
+
+
+/* Table on index pages */
+table.listing {
+	border-width: 1px;
+	border-spacing: 0px;
+	border-style: outset;
+	border-color: black;
+	border-collapse: collapse;
+	border-bottom: solid 2px grey;
+	width: 100%;
+	margin-top: .5em;
+	th {
+		border-width: 1px;
+		padding: 1px;
+		border-style: inset;
+		background-color: lightgray;
+		color: black;
+		border-color: grey;
+		-moz-border-radius: 0;
+		padding: 0px 3px;
+	}
+	td {
+		border-width: 1px;
+		padding: 1px;
+		border-style: inset;
+		border-color: grey;
+		-moz-border-radius: 0;
+		padding: 0px 3px;
+	}
+	.active_true {
+		background-color: lightgreen;
+	}
+	.active_false {
+		background-color: red;
+		color: white;
+	}
+}
+
+.odd {	/* Zebra stripes */
+	background-color: #def; 
+	border-bottom: solid 1px #def;
+}
+.even { 
+	padding-bottom: 1px;
+	border-bottom: solid 1px #def;
+}
+
+
+#found {	/* Num recs found msg for index pages */
+	margin-top: 10px;
+	display: inline;
+	zoom: 1;
+}
+
+.add_new {
+	float: right;
+}
+
+.linkBtn {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	cursor: pointer;
+	border: 1px solid black;
+	background-color: rgb(202, 255, 252);
+	padding: 2px 5px;
+	text-decoration: none;
+	font-family: arial;
+	font-size: small;
+	text-align: center;
+	margin: .5em auto;
+}
+
+
+/* Validation errors */
+.field_with_errors {
+	label {
+		color: red;
+		&:after {
+/*			content: " >>";*/
+		}
+	}
+	input:not([type=submit]), select, textarea {
+		background-color: yellow;
+	}
+}
+
+/* Msg for validation errors */
+#errorExplanation {
+	margin: 0 auto;
+	font-size: 12px;
+	border: solid 1px red;
+	width: 400px;
+	h2 {
+		width: 380px;
+		margin: 0 auto;
+		text-align: center;
+		padding: .3em 10px;
+		font-size: 12px;
+		background-color: red;
+		color: white;
+	}
+	p {
+		margin: .1em 10px;
+	}
+	ul {
+		margin: 0 10px .5em 0;
+		li {
+			list-style: square;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+<%= error_messages_for(@event) %>
+
+<!-- Input fields for New/Edit events -->
+<% if session[:user_role] == "admin" %>
+	<%= i.label(:owner) %>
+	<%= i.select(:owner_id, options_from_collection_for_select(@related[:owners], :id, :name, @event.owner_id)) %>
+<% end %>
+
+<%= i.label(:status) %>
+<%= i.select(:status_id, options_from_collection_for_select(@related[:statuses], :id, :name, @event.status_id)) %>
+
+<%= i.label(:title) %>
+<%= i.text_field(:title) %>
+
+<%= i.label(:description) %>
+<%= i.text_area(:description, size: "20x3") %>
+
+<%= i.label(:road) %>
+<%= i.text_field(:road) %>
+
+<%= i.label(:direction) %>
+<%= i.select(:direction_id, options_from_collection_for_select(@related[:directions], :id, :name, @event.direction_id)) %>
+
+<%= i.label(:district) %>
+<%= i.select(:district_id, options_from_collection_for_select(@related[:districts], :id, :name, @event.district_id)) %>
+
+<%= i.label(:event_type) %>
+<%= i.select(:event_type_id, options_from_collection_for_select(@related[:event_types], :id, :name, @event.event_type_id)) %>
+
+<%= i.label(:severity) %>
+<%= i.select(:severity_id, options_from_collection_for_select(@related[:severities], :id, :name, @event.severity_id)) %>
+
+<%= i.label(:traffic_pattern) %>
+<%= i.select(:traffic_pattern_id, options_from_collection_for_select(@related[:traffic_patterns], :id, :name, @event.traffic_pattern_id)) %>
+
+<%= i.label(:start_date) %>
+<div><%= i.datetime_select(:start_date, {}, {:class => 'datetime_select'}) %></div>
+
+<%= i.label(:end_date) %>
+<div><%= i.datetime_select(:end_date, {}, {:class => 'datetime_select'}) %></div>
+
+<%= i.label(:spatial_type) %>
+<%= select_tag(:spatial_type, options_from_collection_for_select(@related[:spatial_types], :id, :name)) %>
+
+<%= i.label(:coords, "Coordinates (lat/lng)") %>
+<input type="text" id="coords" name="coords" value="<%= @coords %>"/>
+<% if params[:action] == "new" %>
+	<span class="linkBtn" onclick="addMarker($('#coords').val(), 17)">Add Marker</span>
+<% elsif params[:action] == "edit" %>
+	<span class="linkBtn" onclick="addMarker($('#coords').val())">Update Map</span>
+<% end %>
+
+<!-- Data for javascript -->
+<div style="display:none;" id="related_data"><%=raw @related.to_json %></div>
+<div style="display:none;" id="owner_prefs"><%=raw @owner_prefs.to_json %></div>

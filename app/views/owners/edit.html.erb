@@ -1,0 +1,24 @@
+<% @page_title = "Edit Owner" %>
+
+<div class="menu">
+  <% if session[:user_role] == "admin" %>
+    <%= render(:partial => "shared/action_links", :locals => {:controller => "owners", :actions => ["list"]}) %>
+  <% else %>
+    <%= render(:partial => "shared/action_links", :locals => {:actions => ["home"]}) %>
+  <% end %>
+</div>
+
+<%= form_for(:owner, :url => {:action => 'update', :id => @owner.id}) do |i| %>
+  <div class="owner_edit">
+    <h2>Edit Owner Details</h2>
+    <div class="data_edit center">
+    	<%= render(:partial => "input_form", :locals => {:i => i}) %>
+    </div>
+  </div>
+  <%= submit_tag("Save", :class => 'center') %>
+<% end %>
+
+<div class="debug">
+	<hr/>
+	<%= params.inspect %> <!-- View parameters for the page -->
+</div>

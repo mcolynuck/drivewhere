@@ -1,0 +1,62 @@
+<% 
+	if params["action"] == "new"
+		userDataHasAdminRole = false
+	else
+		userDataHasAdminRole = @user.role.name == "admin"
+	end
+	
+	unless @user.id
+		selOwnerId = nil	# New user
+		selRoleId = nil
+	else
+		if userDataHasAdminRole
+			selOwnerId = nil	# admin has no owner
+		else
+			selOwnerId = @user.owner.id
+		end
+		selRoleId = @user.role.id
+	end 
+%>
+
+<%= error_messages_for(@user) %>
+
+<%= i.label(:name, "User Name") %>
+<%= i.text_field(:name) %>
+
+<% if !userDataHasAdminRole or session[:user_role] == "admin" %>
+	<%= i.label(:owner_id, "Owner") %>
+	<%= select_tag(:owner_id, options_from_collection_for_select(@related[:owners], :id, :name, selOwnerId)) %>
+<% end %>
+
+<% if params["action"] == "new" or params["action"] == "create" or session[:user_role] == "admin" %>
+	<%= i.label(:role_id, "Role") %>
+	<%= select_tag(:role_id, options_from_collection_for_select(@related[:roles], :id, :name, selRoleId)) %>
+<% end %>
+
+<%= i.label(:first_name, "First Name") %>
+<%= i.text_field(:first_name) %>
+
+<%= i.label(:last_name, "Last Name") %>
+<%= i.text_field(:last_name) %>
+
+<%= i.label(:phone, "Phone") %>
+<%= i.text_field(:phone) %>
+
+<%= i.label(:email, "Email") %>
+<%= i.text_field(:email) %>
+
+<% if params["action"] == "new" or params["action"] == "create" %>
+	<%= i.label(:password, "Temporary Password") %>
+	<%= i.password_field(:password) %>
+
+	<%= i.label(:password_confirmation, "Confirm Password") %>
+	<%= i.password_field(:password_confirmation) %>
+
+	<%= i.hidden_field(:expiry) %>
+<% else %>
+	<%= i.label(:expiry) %>
+	<div><%= i.datetime_select(:expiry, {}, {:class => 'datetime_select'}) %></div>
+<% end %>
+
+<%= i.label(:active) %>
+<%= i.check_box(:active) %>

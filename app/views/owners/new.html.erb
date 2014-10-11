@@ -1,0 +1,20 @@
+<% @page_title = "New Owner" %>
+
+<div class="menu">
+	<%= render(:partial => "shared/action_links", :locals => {:controller => "owners", :actions => ["list"]}) %>
+</div>
+
+<%= form_for(:owner, :url => {:action => 'create'}) do |i| %>
+  <div class="owner new">
+    <h2>Add New Owner</h2>
+    <div class="data_edit center">
+    	<%= render(:partial => "input_form", :locals => {:i => i}) %>
+    </div>
+  </div>
+  <%= submit_tag("Save", :class => "center") %>
+<% end %>
+
+<div class="debug">
+	<hr/>
+	<%= params.inspect %> <!-- View parameters for the page -->
+</div>

@@ -1,0 +1,44 @@
+Filter Grid
+	-Error if 1 record (or maybe when none?)
+
+Event records
+	-end date in the past
+		-Add validation that end > start
+		-When empty, default display to 1 day in future?
+			-Set in controller?
+		-Add scope for is_active
+			-Add check for this on the public site
+		-Add to param list for new/edit events
+
+User section
+	-Fix that you cannot delete the last admin record
+	-Admin access all
+	-Owner access only their users and create new users for their account
+	-Reviewer and Dataentry have no access to Owner or User section
+
+Owner section
+	-Admin access all
+	-Owner access only their account
+		-Go to show/edit only?
+		-Cannot delete or make inactive
+		-Cannot change to another owner
+
+Event section
+	-Admin access all
+	-Owner access only their events
+	-Reviewer access only their events
+		-Can view, create, edit and mark as inactive
+	-Dataentry access only their events
+		-Can view, create or edit only
+			-Cannot change status to publish
+
+Flash messages
+	-should be located below menu and above title
+		-shared resource
+
+How to clear session user name/id/role when starting app or shutting it down?
+
+Create user
+	-jquery to show/hide fields instead of code in _input_form.html.erb
+
+-User preferences page

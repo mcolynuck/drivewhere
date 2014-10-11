@@ -1,0 +1,27 @@
+<% @page_title = "Edit User" %>
+
+<div class="menu">
+  <%= render(:partial => "shared/action_links", :locals => {:id => @user.id, :controller => "users", :actions => ["list"]}) %>
+</div>
+
+<%= form_for(:user, :url => {:action => 'update', :id => @user.id}) do |i| %>
+  <div class="user_edit">
+    <h2>Edit User Details</h2>
+    <div class="data_edit center">
+    	<%= render(:partial => "input_form", :locals => {:i => i}) %>
+    </div>
+  </div>
+  <div id="resetpwd_div" class="center">
+    <div class="center width_250">
+      <%= link_to("Reset Password", {:action => 'resetpwd', :id => @user.id}, :class => 'resetpwd center linkBtn width_150') %>
+    </div>
+  </div>
+  <%= submit_tag("Save", :class => "center") %>
+<% end %>
+
+<div class="debug">
+	<hr/>PARAMS<br/>
+	<%= params.inspect %> <!-- View parameters for the page -->
+	<hr/>USER DATA<br/>
+	<%= @user.inspect %> <!-- View parameters for the page -->
+</div>

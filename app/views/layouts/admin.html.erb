@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DriveWhere <%= @page_title || "Main" %></title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="main">
+      <div id="banner" class="banner">
+        <%= image_tag "DriveWhere_banner.png", alt: "DriveWhere" %>
+        <% if session[:user_name] %>
+          <%= label_tag 'blank', "You are logged in as [" + session[:user_name] + "]", :class => "login_as" %>
+        <% end %>
+      </div>
+
+      <div id="flash_div">
+        <% if !flash[:error].blank? %>
+            <div class="error"><%= flash[:error] %></div>
+        <% end %>
+        <% if !flash[:warning].blank? %>
+            <div class="warning"><%= flash[:warning] %></div>
+        <% end %>
+        <% if !flash[:notice].blank? %>
+            <div class="notice"><%= flash[:notice] %></div>
+        <% end %>
+      </div>
+
+      <div id="content">
+        <%= yield %>
+      </div>
+
+    </div>
+  </body>
+</html>

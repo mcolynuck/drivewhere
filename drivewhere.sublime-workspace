@@ -1,0 +1,972 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"im",
+				"!important  (value)"
+			],
+			[
+				"LIST",
+				"LISTENER_MARKER_CLICK  (variable)"
+			],
+			[
+				"update",
+				"update_user_params"
+			],
+			[
+				"menu",
+				"menu_height"
+			],
+			[
+				"en",
+				"enableClickListener  (function)"
+			],
+			[
+				"enable",
+				"enableMarkerListener  (function)"
+			],
+			[
+				"remove",
+				"removeClass  (function)"
+			],
+			[
+				"owner",
+				"owner_statuses"
+			],
+			[
+				"ud",
+				"updated_by"
+			],
+			[
+				"pass",
+				"password_confirmation"
+			],
+			[
+				"aut",
+				"authorized_user"
+			],
+			[
+				"created",
+				"created_by"
+			],
+			[
+				"ow",
+				"owner_users"
+			],
+			[
+				"au",
+				"authorized_user"
+			],
+			[
+				"role_user",
+				"role_user_params"
+			],
+			[
+				"password_field",
+				"password_field_tag  (function)"
+			],
+			[
+				"text_field",
+				"text_field_tag  (function)"
+			],
+			[
+				"error_me",
+				"error_messages_for  (function)"
+			],
+			[
+				"severiti",
+				"owner_severities"
+			],
+			[
+				"spatial",
+				"spatial_types"
+			],
+			[
+				"district",
+				"district"
+			],
+			[
+				"to",
+				"to_s"
+			],
+			[
+				"traf",
+				"traffic_pattern"
+			],
+			[
+				"add",
+				"address_2"
+			],
+			[
+				"con",
+				"contact_last"
+			],
+			[
+				"event",
+				"event_types"
+			],
+			[
+				"create",
+				"created_by"
+			],
+			[
+				"spati",
+				"spatial_type_id"
+			],
+			[
+				"event_typ",
+				"event_types_owners"
+			],
+			[
+				"spat",
+				"spatial_type_id"
+			],
+			[
+				"sever",
+				"severity_id"
+			],
+			[
+				"event_",
+				"event_type_id"
+			],
+			[
+				"text",
+				"text-align:   (property)"
+			],
+			[
+				"severi",
+				"severities"
+			],
+			[
+				"down",
+				"downcase  (function)"
+			],
+			[
+				"new",
+				"new"
+			],
+			[
+				"index",
+				"index_filepath"
+			],
+			[
+				"inde",
+				"index_filepath"
+			],
+			[
+				"if",
+				"ife	if … else … end"
+			],
+			[
+				"F",
+				"File	File.open(\"..\") { |file| .. }"
+			],
+			[
+				"action",
+				"get_action"
+			],
+			[
+				"s",
+				"sub	sub(/../) { |match| .. }"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "nEvent records\n	-end date in the past\n		-Add validation that end > start\n		-When empty, default display to 1 day in future?\n			-Set in controller?\n		-Add scope for is_active\n			-Add check for this on the public site\n		-Add to param list for new/edit events\n\nUser section\n	-Fix that you cannot delete the last admin record\n	-Admin access all\n	-Owner access only their users and create new users for their account\n	-Reviewer and Dataentry have no access to Owner or User section\n\nOwner section\n	-Admin access all\n	-Owner access only their account\n		-Go to show/edit only?\n		-Cannot delete or make inactive\n		-Cannot change to another owner\n\nEvent section\n	-Admin access all\n	-Owner access only their events\n	-Reviewer access only their events\n		-Can view, create, edit and mark as inactive\n	-Dataentry access only their events\n		-Can view, create or edit only\n			-Cannot change status to publish\n\nFlash messages\n	-should be located below menu and above title\n		-shared resource\n\nHow to clear session user name/id/role when starting app or shutting it down?\n\nCreate user\n	-jquery to show/hide fields instead of code in _input_form.html.erb\n\n-User preferences page",
+			"file": "todo.txt",
+			"file_size": 1257,
+			"file_write_time": 130574017674817500,
+			"settings":
+			{
+				"buffer_size": 1160,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Setup github for drivewhere\nSetup heroku and deploy app\n",
+			"file": "My Tasks.txt",
+			"file_size": 0,
+			"file_write_time": 130575271371383549,
+			"settings":
+			{
+				"buffer_size": 56,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1401,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/.gitconfig",
+		"/D/devel/www/drivewhere/db/seeds.rb",
+		"/D/devel/www/drivewhere/Gemfile",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/rails-erd-1.1.0/lib/rails_erd/diagram/graphviz.rb",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/rake-10.3.2/lib/rake/version.rb",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/rake-10.3.2/lib/rake/private_reader.rb",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/rake-10.3.2/lib/rake/runtest.rb",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/rake-10.3.2/lib/rake/contrib/sshpublisher.rb",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/rake-10.3.2/lib/rake/ext/module.rb",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/rake-10.3.2/rakelib/test_times.rake",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/rake-10.3.2/lib/rake/contrib/compositepublisher.rb",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/rake-10.3.2/doc/command_line_usage.rdoc",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/rake-10.3.2/doc/rakefile.rdoc",
+		"/D/devel/www/drivewhere/app/views/events/tablefilter_example.html",
+		"/D/devel/www/drivewhere/app/views/events/examples_EN.htm",
+		"/D/devel/www/drivewhere/app/views/events/index.html.erb",
+		"/D/devel/www/drivewhere/app/assets/javascripts/tablefilter.js",
+		"/D/devel/www/drivewhere/app/views/events/edit.html.erb",
+		"/D/devel/www/drivewhere/app/assets/javascripts/events.js",
+		"/D/devel/www/drivewhere/log/development.log",
+		"/D/devel/www/drivewhere/app/controllers/events_controller.rb",
+		"/D/devel/www/drivewhere/app/views/events/filtergrid.css",
+		"/D/devel/www/drivewhere/app/views/events/new.html.erb",
+		"/D/devel/www/drivewhere/app/views/events/_input_form.html.erb",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/events.css.scss",
+		"/D/devel/www/drivewhere/app/assets/javascripts/application.js",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/filtergrid.css",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/application.css.scss",
+		"/D/devel/www/drivewhere/app/views/layouts/event.html.erb",
+		"/D/devel/www/drivewhere/app/views/layouts/admin.html.erb",
+		"/D/devel/www/drivewhere/app/controllers/public_controller.rb",
+		"/D/devel/www/drivewhere/app/views/public/index.html.erb",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/public.css.scss",
+		"/D/devel/www/drivewhere/app/views/access/index.html.erb",
+		"/D/devel/www/drivewhere/app/assets/javascripts/a0e6046b-31eb-4b70-9548-b1b000bd1a90.dmp",
+		"/D/devel/www/drivewhere/app/assets/javascripts/public.js",
+		"/D/devel/www/drivewhere/app/assets/javascripts/map.js",
+		"/D/devel/www/drivewhere/app/models/owner.rb",
+		"/D/devel/www/drivewhere/app/controllers/owners_controller.rb",
+		"/D/devel/www/drivewhere/app/models/user.rb",
+		"/D/devel/www/drivewhere/app/models/event.rb",
+		"/D/devel/www/drivewhere/app/views/users/_input_form.html.erb",
+		"/D/devel/www/drivewhere/app/controllers/users_controller.rb",
+		"/D/devel/www/drivewhere/app/views/shared/_action_links.html.erb",
+		"/D/devel/www/drivewhere/app/views/events/delete.html.erb",
+		"/D/devel/www/drivewhere/app/views/events/show.html.erb",
+		"/D/devel/www/drivewhere/db/migrate/20140916231602_create_events.rb",
+		"/D/devel/www/drivewhere/test/models/role__user_test.rb",
+		"/D/devel/www/drivewhere/app/views/layouts/public.html.erb",
+		"/D/devel/www/drivewhere/app/views/layouts/application.html.erb",
+		"/D/devel/www/drivewhere/app/assets/javascripts/map.bak",
+		"/D/devel/www/drivewhere/config/routes.rb",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/access.css.scss",
+		"/D/devel/www/drivewhere/app/assets/javascripts/map.js.bak",
+		"/D/devel/www/drivewhere/app/views/owners/show.html.erb",
+		"/D/devel/www/drivewhere/app/views/owners/edit.html.erb",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss",
+		"/D/devel/www/drivewhere/db/migrate/20140916233941_create_owners.rb",
+		"/D/devel/www/drivewhere/app/views/owners/_input_form.html.erb",
+		"/D/devel/www/drivewhere/app/views/owners/index.html.erb",
+		"/D/devel/www/drivewhere/app/models/role_user.rb",
+		"/D/devel/www/drivewhere/app/models/role.rb",
+		"/D/devel/www/drivewhere/db/migrate/20140916231321_create_severities.rb",
+		"/D/devel/www/drivewhere/db/migrate/20141008130133_create_join_table_event_role.rb",
+		"/D/devel/www/drivewhere/db/migrate/20141008125954_create_join_table_event_owner.rb",
+		"/D/devel/www/drivewhere/db/migrate/20141008125806_create_join_table_event_owner.rb",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/users.css.scss",
+		"/D/source/drivebc/js/map-plugin/layersStoresMarkers.js",
+		"/D/source/drivebc/js/drivebc.js",
+		"/D/devel/www/drivewhere/app/models/location.rb",
+		"/D/source/drivebc/js/map-plugin/driveBCMap.js",
+		"/D/source/drivebc/css/style.css",
+		"/D/source/drivebc/index.html",
+		"/D/source/drivebc/static/links.html",
+		"/D/source/drivebc/static/welcome.html",
+		"/D/devel/www/drivewhere/app/views/users/index.html.erb",
+		"/D/devel/www/drivewhere/app/views/owners/new.html.erb",
+		"/D/devel/www/drivewhere/app/views/owners/delete.html.erb",
+		"/D/devel/www/drivewhere/app/views/users/edit.html.erb",
+		"/D/devel/www/drivewhere/app/views/users/show.html.erb",
+		"/D/devel/www/drivewhere/app/views/users/resetpwd.html.erb",
+		"/D/devel/www/drivewhere/app/views/users/new.html.erb",
+		"/D/devel/www/drivewhere/app/views/users/changepwd.html.erb",
+		"/D/devel/www/drivewhere/app/views/users/delete.html.erb",
+		"/D/devel/www/drivewhere/tmp/cache/assets/development/sass/e9c83b00639342b475a247b55c35e4e1ada7a74f/application.css.scssc",
+		"/D/devel/www/drivewhere/tmp/cache/assets/development/sprockets/c13fc73ceafa45876a901b3e775b83ae",
+		"/D/devel/www/drivewhere/tmp/cache/assets/development/sprockets/bcca522c6302f184f12fe0e8a7d7e71a",
+		"/D/devel/www/drivewhere/tmp/cache/assets/development/sprockets/8ab512c9b33ac90e699b73469d71f061",
+		"/D/devel/www/drivewhere/app/helpers/application_helper.rb",
+		"/D/devel/www/drivewhere/app/helpers/users_helper.rb",
+		"/D/devel/www/drivewhere/db/migrate/20141001220811_create_users.rb",
+		"/D/devel/www/drivewhere/config/initializers/session_store.rb",
+		"/D/devel/www/drivewhere/events_table.sql",
+		"/D/devel/www/drivewhere/config.ru",
+		"/D/devel/www/drivewhere/default)",
+		"/D/devel/www/drivewhere/Super user administrator.)",
+		"/D/devel/www/drivewhere/config/initializers/assets.rb",
+		"/D/devel/www/drivewhere/app/views/users/update.html.erb",
+		"/D/devel/www/drivewhere/app/views/users/destroy.html.erb",
+		"/D/devel/www/drivewhere/app/views/users/create.html.erb",
+		"/D/devel/www/drivewhere/app/views/shared/_error_messages.html.erb",
+		"/D/devel/www/drivewhere/db/migrate/20141002045247_create_role_users.rb.hold",
+		"/D/devel/www/drivewhere/db/migrate/20141002211055_create_owner_users.rb.hold",
+		"/D/devel/www/drivewhere/app/models/owner_user.rb",
+		"/D/devel/www/drivewhere/db/migrate/20141004160857_create_statuses.rb",
+		"/D/devel/www/drivewhere/db/migrate/20141004162344_create_owner_statuses.rb",
+		"/D/devel/www/drivewhere/app/models/owner_status.rb",
+		"/D/source/drivebc/js/map-plugin/spiderfier.js",
+		"/D/devel/www/drivewhere/app/assets/javascripts/users.js.coffee",
+		"/D/source/drivebc/csrtp.html",
+		"/D/devel/www/drivewhere/app/controllers/access_controller.rb",
+		"/D/devel/www/drivewhere/app/controllers/application_controller.rb",
+		"/D/devel/www/drivewhere/Limited user who can only view event data tied to their owner id.)",
+		"/D/devel/www/drivewhere/db/migrate/20141002045247_create_role_users.rb",
+		"/D/devel/www/drivewhere/db/migrate/20140923222552_create_owner_traffic_patterns.rb",
+		"/D/devel/www/drivewhere/db/migrate/20140923000305_create_owner_districts.rb",
+		"/D/devel/www/drivewhere/db/migrate/20140917002644_create_owner_severities.rb",
+		"/D/devel/www/drivewhere/db/migrate/20140917002536_create_owner_event_types.rb",
+		"/D/devel/www/drivewhere/db/migrate/20141002211055_create_owner_users.rb",
+		"/D/devel/www/drivewhere/app/models/severity.rb",
+		"/D/devel/www/drivewhere/app/models/owner_severity.rb",
+		"/D/devel/www/drivewhere/db/migrate/20141002044802_create_roles.rb",
+		"/D/devel/www/drivewhere/app/views/access/login.html.erb",
+		"/D/devel/www/drivewhere/db/migrate/20141002045247_create_user_roles.rb",
+		"/D/devel/www/drivewhere/app/models/user_role.rb",
+		"/D/devel/www/drivewhere/db/schema.rb",
+		"/D/devel/www/drivewhere/test/models/user_test.rb",
+		"/D/devel/www/drivewhere/jkrowling)"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"D:\\devel\\www\\drivewhere\\app\\",
+			"D:\\source\\drivebc",
+			"D:\\devel\\www\\drivewhere\\app\\",
+			"D:\\source\\drivebc",
+			"D:\\devel\\www\\drivewhere\\",
+			"D:\\devel\\www\\drivewhere\\app\\",
+			"D:\\devel\\www\\drivewhere\\app\\,D:\\source\\drivebc\\js",
+			"D:\\devel\\www\\drivewhere\\app\\",
+			"D:\\devel\\www\\drivewhere\\app\\models",
+			"",
+			"D:\\devel\\Ruby200\\lib\\ruby\\gems\\2.0.0\\gems\\rgeo-0.3.20\\lib\\rgeo",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"save",
+			"getCellsNb",
+			"getChildElms",
+			"getCellsNb",
+			"console",
+			"ncells",
+			"console",
+			"getCellsNb",
+			"logger",
+			"enter 'INDEX' function",
+			"confirm_user_access",
+			"Cannot locate event",
+			"initEventMap",
+			"editMap",
+			"eventMap",
+			"editMap",
+			"newMap",
+			"grabEBI",
+			"grabTag",
+			"getCellsNb",
+			"_row ",
+			"getChildElms",
+			"grabTag",
+			"getCellsNb",
+			"Table 1",
+			"getChildElms",
+			"!important",
+			"value",
+			"enableListeners",
+			"return",
+			", $(\"#coords\"",
+			"editMap.enableListeners",
+			"enableListeners",
+			"enableLis",
+			"enableListeners",
+			"coordsElm",
+			"fieldName",
+			"enableListeners",
+			"fieldName",
+			"coords",
+			"user_accessible",
+			"report_map_content",
+			"mapdiv",
+			"content_map",
+			"Map",
+			"map",
+			"publicMap",
+			"click",
+			"get_related",
+			"new_user_params",
+			"password",
+			">>",
+			"DriveWhere_banner",
+			"Drivewhere_banner",
+			"console",
+			"LISTENER_MARKER_CLICK",
+			"marker",
+			"addMarker",
+			"enableMapClickListener",
+			"enableListeners",
+			"dragdrop",
+			"enableMapClickListener",
+			"enableMarkerListener",
+			"enableDragDropListener",
+			"enableMapClickListener",
+			"enableClickListener",
+			"addWeatherLayer",
+			"addDrawingManager",
+			"Map",
+			"$(document).on(\"page:load ready\"",
+			"factory",
+			"geom",
+			"startLong",
+			"prevZoom",
+			"activeListeners",
+			"clickListener",
+			"dragDropListener",
+			"markerListener",
+			"lng",
+			"google",
+			"update_user_params_admin",
+			"update_user_params",
+			".set",
+			".set(",
+			"infoWindow",
+			"enableMarkerListener",
+			"enableDragDropListener",
+			"dragend",
+			"addMarkerWithInfo",
+			"link",
+			"confirm_user_access",
+			"event_params",
+			"confirm_user_access",
+			"accessible?",
+			"user_accessible?",
+			"event_params",
+			"update_user_params",
+			"event_params",
+			"owner_params",
+			"event_params",
+			"params",
+			"event_params",
+			"enableMarkerListener",
+			"addMarker",
+			"enableMarkerListener",
+			"addMarker",
+			"latLng",
+			"placeMarker",
+			"addMarker",
+			"enableClickListener",
+			"role_user",
+			"markerListener",
+			"clearListener",
+			"enableDragDropListener",
+			"addMarker",
+			"in_edit",
+			"in_public",
+			"console",
+			"markerListener",
+			"enableDragDropListener",
+			"\"marker\"",
+			"enableMarkerListener",
+			"activeListeners",
+			"markers",
+			"deleteMarker",
+			"activeListeners",
+			"enableClickListener",
+			"editMap"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"editMap",
+			"coordsElm",
+			"enableMarkerClickListener",
+			"enableMarkerDragDropListener",
+			"enableMapClickListener",
+			"clickMapListener",
+			"dragDropListener",
+			"\"dragdrop\"",
+			"enableDragDropListener",
+			"eventMap",
+			"markers",
+			"markerListener",
+			"enableClickListener",
+			"Click.prototype",
+			"Map.prototype",
+			"width_50_precent",
+			"width_50%",
+			"linkBtn",
+			"enable",
+			"_",
+			"userDataHasAdminRole",
+			":user_role",
+			"@user",
+			"prefs",
+			"newOwnerId",
+			"select_tag",
+			"i.",
+			"listing",
+			"event",
+			"@event",
+			":",
+			"o.label",
+			"name",
+			"name:",
+			"@owner.",
+			"owner.",
+			"#",
+			"\") %>",
+			"<%= label_tag(:q, \"",
+			"#"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "todo.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1,
+								1
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "My Tasks.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 56,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Gemfile",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 109.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "drivewhere.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\temp\\Sass\\Ex_Files_Fndtn_Sass_Compass\\SassTutorial.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

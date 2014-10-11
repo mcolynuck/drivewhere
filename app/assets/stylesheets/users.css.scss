@@ -1,0 +1,58 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user_chgpwd {}
+
+.data_edit {
+	width: 500px;
+	
+	input:not([type=submit]), textarea, select {
+		width: 20em;
+		display: block;
+		*display: block;
+		zoom: 1;
+	}
+
+	input[type=checkbox] {
+		width: 1em;
+		display: inline;
+	}
+
+	input[type=submit], button {
+		display: block;
+		min-width: 6px;
+		padding: 2px 3em;
+	}
+
+	li {
+		margin: 2px 0;
+	}
+
+	.datetime_select {
+		display: inline-block;
+		margin: 4px 0;
+		width: auto;
+	}
+}
+
+#resetpwd_div {
+	width: 300px;
+	margin-bottom: .5em;
+	text-align: center;
+}
+
+.user_edit {
+}
+
+.user_show, .user_delete, .user_index {
+	.data_show {
+		width: 35%;
+		margin: 1em auto;
+		border: 1px solid black;
+	}
+	.data_table {
+		width: 55%;
+		margin: 0 auto;				
+	}
+}

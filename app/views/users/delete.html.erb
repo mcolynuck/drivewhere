@@ -1,0 +1,26 @@
+<% @page_title = "Delete User" %>
+
+<div class="menu">
+  <%= render(:partial => "shared/action_links", :locals => {:controller => "users", :actions => ["list"]}) %>
+</div>
+
+<%= form_for(:user, :url => {:action => 'destroy', :id => @user.id}) do |o| %>
+  <div class="user_delete">
+    <h2>Delete User Confirmation</h2>
+    <div class="data_show">
+      <ul>
+      	<li>
+        		<%= label_tag(:name, "Name") %>
+        		<%= @user.name %>
+      	</li>
+      	<% unless @user.role.name == "admin" %>
+  	    	<li>
+  	      		<%= label_tag(:owner, "Owner") %>
+  	      		<%= @user.owner.name %>
+  	    	</li>
+  	    <% end %>
+      </ul>
+    </div>
+  </div>
+  <%= submit_tag("Delete", :class => "center") %>
+<% end %>

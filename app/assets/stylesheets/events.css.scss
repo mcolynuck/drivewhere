@@ -1,0 +1,93 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.flt {	/* Filter table row */
+	width: 100%  !important;
+	padding: 0  !important;
+	margin: 0  !important;
+	border: none;
+	background-color: rgb(240,240,240);
+	color: black;
+}
+.fltrow {
+	border: 3px solid black;
+	background-color: rgb(240,240,240);
+}
+
+.content_new, .content_edit, .content_show {
+	#coords {
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+	}
+}
+
+/*h2 {
+	margin-top: 0;
+}*/
+
+.del_marker {
+	float: right;
+}
+
+.event_new, .event_edit, .event_show {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	width: 100%;
+
+	.inputs, .data_show {
+		width: 40%;
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+		vertical-align: top;
+	
+		.desc {
+			width: 20em;
+			display: inline-block;
+		}
+	
+		.datetime_select {
+			display: inline-block;
+			margin: 4px 0;
+			width: auto;
+		}
+	}
+}
+
+.event_delete {
+	.data_show {
+		width: 54em;
+		border: 1px solid grey;
+		margin: 1em auto;
+	}
+	.desc {
+		width: 39em;
+		display: inline-block;
+	}
+}
+
+
+.mapdiv {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	width: 58%;
+	height: 375px;
+/*	background-color: lightgrey;*/
+	#maptop {
+		display: block;
+		height: 1.5em;
+		margin-bottom: .5em;
+	}
+	#mapbottom {
+		display: block;
+		height: 380px;
+	}
+}
+
+#submit_div {
+	margin-top: 1em;
+}

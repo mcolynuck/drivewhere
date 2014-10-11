@@ -1,0 +1,25 @@
+<% @page_title = "Delete Event" %>
+
+<div class="menu">
+  <%= render(:partial => "shared/action_links", :locals => {:controller => "events", :actions => ["list"]}) %>
+</div>
+
+<%= form_for(:event, :url => {:action => 'destroy', :id => @event.id}) do |o| %>
+  <div class="event_delete">
+    <h2>Delete Event Confirmation</h2>
+    <div class="data_show center">
+      <ul>
+      	<li>
+        		<%= label_tag(:name, "Name") %>
+        		<%= @event.title %>
+      	</li>
+      	<li>
+        		<%= label_tag(:description, "Description") %>
+        		<span class="desc"><%= @event.description %></span>
+      	</li>
+      </ul>
+    </div>
+  </div>
+  <%= submit_tag("Delete", :class => "center") %>
+
+<% end %>

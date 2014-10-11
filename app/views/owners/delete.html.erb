@@ -1,0 +1,24 @@
+<% @page_title = "Delete Owner" %>
+
+<div class="menu">
+  <%= render(:partial => "shared/action_links", :locals => {:controller => "owners", :actions => ["list"]}) %>
+</div>
+
+<%= form_for(:owner, :url => {:action => 'destroy', :id => @owner.id}) do |o| %>
+  <div class="owner_delete">
+    <h2>Delete Owner Confirmation</h2>
+    <div class="data_show center">
+      <ul>
+      	<li>
+        		<%= label_tag(:name, "Name") %>
+        		<%= @owner.name %>
+      	</li>
+      	<li>
+        		<%= label_tag(:description, "Description") %>
+        		<%= @owner.description %>
+      	</li>
+      </ul>
+    </div>
+  </div>
+  <%= submit_tag("Delete", :class => "center") %>
+<% end %>

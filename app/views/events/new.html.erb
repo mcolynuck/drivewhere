@@ -1,0 +1,52 @@
+ <% @page_title = "New Event" %>
+
+<div class="menu">
+	<%= render(:partial => "shared/action_links", :locals => {:id => @event.id, :controller => "events", :actions => ["list"]}) %>
+</div>
+
+<%= form_for(:event, :url => {:action => 'create'}) do |i| %>
+  	<div class="event_new">
+    	<h2>Add New Event</h2>
+    	<div class="content_new">
+			<div class="inputs">
+	      		<%= render(:partial => "input_form", :locals => {:@related => @related, :i => i}) %>
+	    	</div>
+	  		<div id="mapdiv" class="mapdiv">
+  				<div id="maptop">
+  	  	  			<span id="map_instructions">Click in map to place marker or enter coordinates and click 'Add Marker'</span>
+    	  				<%= link_to "Delete Marker", '#', :id => "del_marker", :class => "del_marker linkBtn" %>
+  				</div>
+  				<div id="mapbottom">
+  		  			<div id="map" class="map"></div>
+  				</div>
+	  		</div>
+    	</div>
+  	</div>
+  	<div id="submit_div">
+  		<div class="center width_150">
+  			<%= submit_tag("Save") %>
+  		</div>
+  	</div>
+<% end %>
+
+<script>
+  function addMarker(coords, zoomLvl){
+      newMap.addMarker(coords, zoomLvl);
+  }
+
+  $(function () {
+    // Maximize map in surrounding div.    
+    $("#map").width($(".mapdiv").width());
+    $("#map").height($(".mapdiv").height() - $(".maptop").height());
+
+    newMap = new Map($("#map").get(0));
+    newMap.enableListeners([newMap.LISTENER_MARKER_DRAGDROP, newMap.LISTENER_MAP_CLICK], $("#coords"));
+  });
+
+	$(document).on("page:load ready", new_events_ready);
+</script>
+
+<div class="debug">
+	<hr/>
+	<%= params.inspect %> <!-- View parameters for the page -->
+</div>

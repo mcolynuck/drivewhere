@@ -1,0 +1,66 @@
+// Place all the styles related to the Public controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.left_side {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	width: 1000px;
+	.mapdiv {
+		width: 1000px;
+		height: 500px;
+	}
+}
+.right_side {
+	float: right;
+	width: 200px;
+	height: 100%;
+	ul {
+		width: 150px;
+		padding: 20px;
+		margin: 0;
+	}
+}
+
+/* Menu */
+$tab_height: .3em;
+.tabs {
+	width: 100%;
+	padding: $tab_height 0;
+	background-color: lightgrey;
+	margin-bottom: .5em;
+}
+
+.tab_item {
+	padding: $tab_height 1em;
+	border-right: 2px solid rgb(199, 198, 198);
+	&:hover {
+		border-bottom: 4px solid red;
+	}
+}
+
+.tab_active {
+	border-bottom: 4px solid black;
+}
+
+
+#content_report {
+	#report_form {
+		display: inline-block;
+		width: 40%;
+		vertical-align: top;
+		#instructions {
+			width: 80%;
+			margin: auto;
+		}
+	}
+	#report_map_content {
+		display: inline-block;
+		width: 58%;
+		#report_map {
+			width: 700px;
+			height: 400px;
+		}
+	}
+}

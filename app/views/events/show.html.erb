@@ -1,0 +1,123 @@
+<% @page_title = "Show Event" %>
+
+<div class="menu">
+  <%= render(:partial => "shared/action_links", :locals => {:controller => "events", :id => @event.id, :actions => ["list", "new", "edit", "delete"]}) %>
+</div>
+
+<div class="event_show">
+  <h2>Event Detail</h2>
+  <div class="content_show">
+    <div class="data_show">
+      <ul>
+        <% if session[:user_role] == "admin" %>
+          <li>
+            <%= label_tag(:owner_name, "Owner") %>
+            <%= @event.owner.name %>
+          </li>
+        <% end %>
+        <li>
+          <%= label_tag(:status, "Status") %>
+          <%= @event.status.name %>
+        </li>
+        <li>
+          <%= label_tag(:title, "Title") %>
+          <%= @event.title || '----' %>
+        </li>
+        <li>
+          <%= label_tag(:description, "Description") %>
+          <div class="desc"><%= @event.description || '----' %></div>
+        </li>
+        <li>
+          <%= label_tag(:road, "Road") %>
+          <%= @event.road || '----' %>
+        </li>
+        <li>
+          <%= label_tag(:direction_name, "Direction") %>
+          <%= @event.direction.name %>
+        </li>
+        <li>
+          <%= label_tag(:district_name, "District") %>
+          <%= @event.district.name %>
+        </li>
+        <li>
+          <%= label_tag(:event_type_name, "Event Type") %>
+          <%= @event.event_type.name %>
+        </li>
+        <li>
+          <%= label_tag(:severity_name, "Severity") %>
+          <%= @event.severity.name %>
+        </li>
+        <li>
+          <%= label_tag(:traffic_pattern, "Traffic Pattern") %>
+          <%= @event.traffic_pattern.name %>
+        </li>
+        <li>
+          <%= label_tag(:traffic_pattern, "Spatial Type") %>
+          <%= @event.location.geom_type %>
+        </li>
+        <li>
+          <%= label_tag(:traffic_pattern, "Coordinates") %>
+          <%= @event.location.geom_coords %>
+        </li>
+        <li>
+          <%= label_tag(:start_date, "Start Date") %>
+          <%= @event.start_date || '----' %>
+        </li>
+        <li>
+          <%= label_tag(:end_date, "End Date") %>
+          <%= @event.end_date || '----' %>
+        </li>
+        <li>
+          <%= label_tag(:created_by, "Created By") %>
+          <%= @event.created_by %>
+        </li>
+        <li>
+          <%= label_tag(:created_at, "Created") %>
+          <%= @event.created_at.to_formatted_s(:long) %>
+        </li>
+        <li>
+          <%= label_tag(:updated_by, "Updated By") %>
+          <%= @event.updated_by || '----' %>
+        </li>
+        <li>
+          <%= label_tag(:updated_at, "Updated") %>
+          <%= @event.updated_at.to_formatted_s(:long) %>
+        </li>
+      </ul>
+    </div>
+    <div id="mapdiv" class="mapdiv">
+      <div id="maptop">
+        <span id="map_instructions"></span>
+      </div>
+      <div id="mapbottom">
+        <div id="map" class="map"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function () {
+    // Maximize map in surrounding div.    
+    $("#map").width($(".mapdiv").width());
+    $("#map").height($(".mapdiv").height() - $(".maptop").height());
+
+    showMap = new Map($("#map").get(0));
+
+    // Should work for point and multipoint but no other types yet.
+    <% @event.location.geom.each {|g| %>
+      <%= raw 'showMap.addMarker("'+g.y.to_s+' '+g.x.to_s+'", 17, true);' %>
+    <% } %>
+  });
+
+  $(document).on("page:load ready", show_events_ready);
+</script>
+
+
+<div class="debug">
+  <hr/>
+  <%= @event.location.inspect %>
+  <%= params.inspect %> <!-- View parameters for the page -->
+  <hr/>
+  <%= @event.inspect %>
+</div>

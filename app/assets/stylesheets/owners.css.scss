@@ -1,0 +1,72 @@
+// Place all the styles related to the Owners controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.data_edit {
+	width: 50%;
+	
+	label {
+		width: 12em;
+	}
+
+	input:not([type=submit]), textarea, select {
+		width: 20em;
+		display: block;
+		*display: block;
+		zoom: 1;
+	}
+
+	input[type=checkbox] {
+		width: 1em;
+		display: inline;
+	}
+
+	input[type=submit], button {
+		display: block;
+		min-width: 6px;
+		padding: 2px 3em;
+	}
+
+	li {
+		margin: 2px 0;
+	}
+
+	.datetime_select {
+		display: inline-block;
+		margin: 4px 0;
+		width: auto;
+	}
+}
+
+
+.owner_edit {
+	margin-bottom: 1em;
+}
+
+.owner_show, .owner_delete, .owner_index {
+	.data_show {
+		width: 45%;
+		border: 1px solid black;
+		margin: 1em auto;
+		ul {
+			padding: 0;
+			li {
+				label {
+					width: 14em;
+				}
+				span {
+					display: inline-block;
+					width: 30em;
+				}
+			}
+		}
+	}
+	.data_table {
+		width: 100%;
+		margin: 0 auto;		
+		.desc {
+			width: 20em;
+			display: inline-block;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+<% @page_title = "New User" %>
+
+<div class="menu">
+	<%= render(:partial => "shared/action_links", :locals => {:id => @user.id, :controller => "users", :actions => ["list"]}) %>
+</div>
+
+<%= form_for(:user, :url => {:action => 'create'}) do |i| %>
+  <div class="user_new">
+    <h2>New User Details</h2>
+    <div class="data_edit center">
+    	<%= render(:partial => "input_form", :locals => {:i => i}) %>
+    </div>
+  </div>
+  <%= submit_tag("Save", :class => "center") %>
+<% end %>
+
+<div class="debug">
+	<hr/>
+	<%= params.inspect %> <!-- View parameters for the page -->
+</div>

@@ -1,0 +1,40 @@
+<%= error_messages_for(@owner) %>
+
+<%= i.label(:name, "Client Name") %>
+<%= i.text_field(:name) %>
+
+<%= i.label(:description, "Description") %>
+<%= i.text_field(:description) %>
+
+<%= i.label(:contact_first, "Contact First Name") %>
+<%= i.text_field(:contact_first) %>
+
+<%= i.label(:contact_last, "Contact Last Name") %>
+<%= i.text_field(:contact_last) %>
+
+<%= i.label(:address_1, "Address") %>
+<%= i.text_field(:address_1) %>
+
+<%= i.label(:address_2, "Suite / Unit") %>
+<%= i.text_field(:address_2) %>
+
+<%= i.label(:city, "City") %>
+<%= i.text_field(:city) %>
+
+<%= i.label(:region, "Region") %>
+<%= i.text_field(:region) %>
+
+<%= i.label(:country, "Country") %>
+<%= i.text_field(:country) %>
+
+<%= i.label(:postal, "Postal") %>
+<%= i.text_field(:postal) %>
+
+<%= i.label(:phone, "Phone") %>
+<%= i.telephone_field(:phone) %>
+
+<%= i.label(:email, "Email") %>
+<%= i.email_field(:email) %>
+
+<%= i.label(:active, "Active") %>
+<%= i.check_box(:active) %>

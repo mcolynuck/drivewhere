@@ -1,0 +1,45 @@
+<% @page_title = "Users Index" %>
+
+<div class="menu">
+	<%= render(:partial => "shared/action_links", :locals => {:controller => "users", :actions => ["home", "owners", "events"]}) %>
+</div>
+
+<h2>User Index</h2>
+<div class="user_index">
+	<div class="data_table">
+		<div>
+			<div id="found"><%= pluralize(@users.size, 'User') %> found</div>
+			<div class="add_new"><%= link_to("Add New User", {:action => 'new'}, :class => 'action_new linkBtn') %></div>
+		</div>
+		<table class="listing" summary="User List">
+			<tr class="header">
+				<th>Name</th>
+				<th>Owner</th>
+				<th>Role</th>
+				<th>Active</th>
+				<th>Actions</th>
+			</tr>
+			<% @users.each do |user| %>
+			<tr class="<%= cycle('odd', 'even') %>">
+				<td><%= user.name %></td>
+				<% if user.owner %>
+					<td><%= user.owner.name %></td>
+				<% else %>
+					<td></td>
+				<% end %>
+				<td><%= user.role.name %></td>
+				<td class="active_<%= user.active?.to_s %>"><%= user.active?.to_s %></td>
+				<td class="actions">
+					<%= render(:partial => "shared/action_links", :locals => {:id => user.id, :controller => "users", :actions => ["show", "edit", "delete"]}) %>
+				</td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
+
+<div class="debug">
+	<hr/>
+	users RAW DATA:<br/>
+	<%= @users.inspect %> <!-- View parameters for the page -->
+</div>

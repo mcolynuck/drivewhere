@@ -1,0 +1,166 @@
+<% @page_title = "Events" %>
+
+<div id="tab_menu" class="tabs">
+	<span id="_map" class="tab_item tab_active">Map</span><span id="_events" class="tab_item">Events</span><span id="_report" class="tab_item" onclick="report_menu_clicked();">Report</span>
+</div>
+
+<div id="content_map" class="" style="">
+	<div id="maparea" class="left_side">
+		<div id="map" class="mapdiv"></div>
+	</div>
+	<div id="sidebar" class="right_side">
+		<ul>
+			<li>
+				<%= label_tag("weather_layer"); %>
+				<%= check_box_tag("weather_layer", '', false) %>
+			</li>
+			<li>
+				<%= label_tag("traffic_layer", "Traffic Layer"); %>
+				<%= check_box_tag "traffic_layer", '', false %>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div id="content_events" class="" style="display:none;">
+	<h2>Events</h2>
+	<div>
+		<div id="found"><%= pluralize(@events.size, 'Event') %> found</div>
+	</div>
+	<table class="listing" summary="Event List">
+		<tr class="header">
+			<th>Road</th>
+			<th>District</th>
+			<th>Direction</th>
+			<th>Event Type</th>
+			<th>Severity</th>
+			<th>Title</th>
+			<th>Description</th>
+			<th>Traffic Pattern</th>
+		</tr>
+		<% @events.each do |event| %>
+		<tr class="<%= cycle('odd', 'even') %>">
+			<td><%= event.road %></td>
+			<td><%= event.district.name %></td>
+			<td><%= event.direction.name %></td>
+			<td><%= event.event_type.name %></td>
+			<td><%= event.severity.name %></td>
+			<td><%= event.title %></td>
+			<td><%= event.description %></td>
+			<td><%= event.traffic_pattern.name %></td>
+		</tr>
+		<% end %>
+	</table>
+</div>
+
+<div id="content_report" class="" style="display:none;">
+	<h2>Report An Event</h2>
+	<div id="input_area">
+		<div id="report_form">
+		  	<div id="instructions">
+		  		<h3>Instructions</h3>
+		  		<ol>
+		  			<li>Briefly describe the incident in the area below.</li>
+		  			<li>Fill in the name of the road or highway.</li>
+		  			<li>Indicate the direction of traffic affected.</li>
+		  			<li>Place a marker in the map where the incident can be found</li>
+		  			<li>Click 'Report' to submit the information.</li>
+				</ol>
+			</div>
+
+			<%= form_for(:event, :url => {:action => 'create'}) do |i| %>
+				<div id="report_inputs">
+					<%= i.label(:description) %>
+					<%= i.text_area(:description, size: "30x5") %>
+
+					<%= i.label(:road) %>
+					<%= i.text_field(:road) %>
+
+					<%= i.label(:direction) %>
+					<%= i.select(:direction_id, options_from_collection_for_select(@related[:directions], :id, :name, @event.direction_id)) %>
+
+					<%= hidden_field_tag :coords, @coords %>
+				</div>
+
+			  	<div id="submit_div">
+			  		<div class="center width_150">
+			  			<%= submit_tag("Report") %>
+			  		</div>
+			  	</div>
+			<% end %>
+		</div>
+		<div id="report_map_content">
+			<div>Click on the map to place a marker. You can re-click or move the marker as necessary.</div>
+  			<div id="report_map" class=""></div>
+		</div>
+
+		<!-- Data for javascript -->
+		<div style="display:none;" id="related_data"><%=raw @related.to_json %></div>
+	</div>
+</div>
+
+<script>
+	$(function () {
+		// Resizes div and creates map.
+		function initMap(){
+			if(!publicMap){		// Only do this once.
+				if(resizeMap()){	// False if not visible.
+					var marker = null;
+					publicMap = new Map($("#map").get(0));
+    				publicMap.enableListeners([publicMap.LISTENER_MARKER_CLICK], $("#coords"));
+				
+				    // Should work for point and multipoint but no other types yet.
+				    <% Event.all.each {|e| %>
+				    	<% if e.published? %>
+				      		<%= raw 'marker = publicMap.addMarker("'+e.location.geom_coords+'", null, false, "' + e.title + '", ' + "'" + e.format + "');" %>
+				      	<% end %>
+				    <% } %>
+				
+					publicMap.showAllMarkers();
+				    $(window).resize(resizeMap);		// If window resizes, resize map
+				}
+			}
+		}
+
+
+		// Check if map is visible before creating and resizing the div element.
+		if ($("#content_map").is(':visible')){
+			initMap();
+		} else {
+			$("#_map").on("click", function(event){
+				if(!publicMap){		// If not yet created, try to create it.
+					window.setTimeout(initMap, 100);
+				}
+			});
+		}
+
+
+	});
+
+
+	/**
+	 * Delay loading the map immediately as the google library may not be loaded for a few millisecionds.
+	 * Only has to be done once.
+	 */
+	var waited = false;
+	function report_menu_clicked(){
+		function wait_for_it(){
+			if($("#report_map_content").is(':visible')){
+		    	$("#report_map").width("700");
+		    	$("#report_map").height("405");
+
+	    		reportMap = new Map($("#report_map").get(0));
+	   		    reportMap.enableListeners([reportMap.LISTENER_MARKER_DRAGDROP, reportMap.LISTENER_MAP_CLICK], $("#coords"));
+	    	} else {
+	    		wait_timer = window.setTimeout(wait_for_it, 100);
+	    	}
+	    }
+	    if(!waited){	// Prevent if we've already done this.
+	    	waited = true;
+	    	wait_for_it();
+	    }
+	}
+
+
+	$(document).on("page:load ready", public_ready);	// Call function when page loads.
+</script>

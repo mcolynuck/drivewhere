@@ -1,0 +1,40 @@
+== README
+
+DriveWhere application - Phase 1 version
+	-Database data is only in English in this version.  
+		-Multiple languages should be planned for in future versions.
+
+* Ruby version:
+	-Written using version 2.0.0p481
+
+* System dependencies:
+	-Postgres and PostGIS plugin:
+		gems: pg, rgeo, activerecord-postgis-adapter
+
+* Configuration:
+	-Postgres and PostGIS
+		-See contents of postgres_setup_notes.txt
+
+* Database creation:
+	-An existing 'drivewhere' postgres server connection with an geospatially enabled 'drivewhere' database.
+	-All tables are created via this applications schema file using rake utility.
+
+* Database initialization:
+	-Use rake command from root of this application to create the required tables:
+		rake db:schema:load
+	-Migrate anything that might not be included in the schema:
+		rake db:migrate
+	-Populate code lookup tables with seed data:
+		rake db:seed
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

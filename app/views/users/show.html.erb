@@ -1,0 +1,71 @@
+<% @page_title = "Show User" %>
+
+<div class="menu">
+  <%= render(:partial => "shared/action_links", :locals => {:id => @user.id, :controller => "users", :actions => ["list", "new", "edit", "delete"]}) %>
+</div>
+
+<div class="user_show">
+  <h2>User Detail</h2>
+  <%= error_messages_for(@user) %>
+  <div class="data_show">
+    <ul>
+      <li>
+        <%= label_tag(:name, "Name") %>
+        <%= @user.name %>
+      </li>
+      <li>
+        <%= label_tag(:owner, "Owner") %>
+        <%= @user.owner ? @user.owner.name : "----" %>
+      </li>
+      <li>
+        <%= label_tag(:role, "Role") %>
+        <%= @user.role.name %>
+      </li>
+      <li>
+        <%= label_tag(:first_name, "First Name") %>
+        <%= nilOrEmpty(@user.first_name, '----') %>
+      </li>
+      <li>
+        <%= label_tag(:last_name, "Last Name") %>
+        <%= nilOrEmpty(@user.last_name, '----') %>
+      </li>
+      <li>
+        <%= label_tag(:phone, "Phone") %>
+        <%= nilOrEmpty(@user.phone, '----') %>
+      </li>
+      <li>
+        <%= label_tag(:email, "Email") %>
+        <%= nilOrEmpty(@user.email, '----') %>
+      </li>
+      <li>
+        <%= label_tag(:active, "Active") %>
+        <%= @user.active ? "Yes" : "No" %>
+      </li>
+      <li>
+        <%= label_tag(:expiry, "Expiry") %>
+        <%= @user.expiry.to_formatted_s(:long) %>
+      </li>
+      <li>
+        <%= label_tag(:created_by, "Created By") %>
+        <%= @user.created_by || '----' %>
+      </li>
+      <li>
+        <%= label_tag(:created_at, "Created") %>
+        <%= @user.created_at.to_formatted_s(:long) || '----' %>
+      </li>
+      <li>
+        <%= label_tag(:updated_by, "Updated By") %>
+        <%= @user.updated_by || '----' %>
+      </li>
+      <li>
+        <%= label_tag(:updated_at, "Updated") %>
+        <%= @user.updated_at.to_formatted_s(:long) || '----' %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="debug">
+  <hr/>
+  <%= params.inspect %> <!-- View parameters for the page -->
+</div>

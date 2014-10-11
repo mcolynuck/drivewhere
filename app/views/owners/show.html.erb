@@ -1,0 +1,92 @@
+<% @page_title = "Show Owner" %>
+
+<div class="menu">
+  <% if session[:user_role] == "admin" %>
+    <%= render(:partial => "shared/action_links", :locals => {:controller => "owners", :id => params[:id], :actions => ["list", "edit"]}) %>
+  <% elsif session[:user_role] == "owner" %>
+    <%= render(:partial => "shared/action_links", :locals => {:controller => "owners", :id => params[:id], :actions => ["home", "edit"]}) %>
+  <% elsif session[:user_role] == "owner" %>
+    <%= render(:partial => "shared/action_links", :locals => {:actions => ["home"]}) %>
+  <% end %>
+</div>
+
+<div class="owner_show">
+  <h2>Owner Detail</h2>
+  <div class="data_show center">
+    <ul>
+      <li>
+        <%= label_tag(:name, "Name") %>
+        <span><%= @owner.name %></span>
+      </li>
+      <li>
+        <%= label_tag(:description, "Description") %>
+        <span><%= @owner.description %></span>
+      </li>
+      <li>
+        <%= label_tag(:contact_first, "Contact First Name") %>
+        <span><%= @owner.contact_first || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:contact_last, "Contact Last Name") %>
+        <span><%= @owner.contact_last || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:address_1, "Address") %>
+        <span><%= @owner.address_1 || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:address_2, "Suite / Unit") %>
+        <span><%= @owner.address_2 || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:city, "City") %>
+        <span><%= @owner.city || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:region, "Region") %>
+        <span><%= @owner.region || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:country, "Country") %>
+        <span><%= @owner.country || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:postal, "Postal") %>
+        <span><%= @owner.postal || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:phone, "Phone") %>
+        <span><%= number_to_phone(@owner.phone) || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:email, "Email") %>
+        <span><%= @owner.email || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:active, "Active") %>
+        <span><%= @user.active ? "Yes" : "No" %></span>
+      </li>
+      <li>
+        <%= label_tag(:created_by, "Created By") %>
+        <span><%= @owner.created_by || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:created_at, "Created") %>
+        <span><%= @owner.created_at.to_formatted_s(:long) || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:updated_by, "Updated By") %>
+        <span><%= @owner.updated_by || '----' %></span>
+      </li>
+      <li>
+        <%= label_tag(:updated_at, "Updated") %>
+        <span><%= @owner.updated_at.to_formatted_s(:long) || '----' %></span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="debug">
+  <hr/>
+  <%= params.inspect %> <!-- View parameters for the page -->
+</div>

@@ -1,0 +1,72 @@
+<% @page_title = "Index Events" %>
+
+<div class="menu">
+	<% if session[:user_role] == "admin" %>
+	    <%= render(:partial => "shared/action_links", :locals => {:actions => ["home", "owners", "users"]}) %>
+	<% else %>
+  		<%= render(:partial => "shared/action_links", :locals => {:actions => ["home"]}) %>
+	<% end %>
+</div>
+
+<div class="events index">
+	<h2>Event Index</h2>
+
+	<div>
+		<div class="add_new"><%= link_to("Add New Event", {:action => 'new'}, :class => 'action_new linkBtn') %></div>
+	</div>
+	<table id="listing" class="listing" summary="Event List">
+		<tr class="header">
+			<% if session[:user_role] == "admin" %>
+				<th>Owner</th>
+			<% end %>
+			<th>Road</th>
+			<th>District</th>
+			<th>Direction</th>
+			<th>Event Type</th>
+			<th>Severity</th>
+			<th>Title</th>
+			<th>Description</th>
+			<th>Traffic Pattern</th>
+			<th>Status</th>
+			<th>Actions</th>
+		</tr>
+		<% @events.each do |event| %>
+		<tr class="<%= cycle('odd', 'even') %>">
+			<% if session[:user_role] == "admin" %>
+				<td><%= event.owner.name %>
+			<% end %>
+			<td><%= event.road %></td>
+			<td><%= event.district.name %></td>
+			<td><%= event.direction.name %></td>
+			<td><%= event.event_type.name %></td>
+			<td><%= event.severity.name %></td>
+			<td><%= event.title %></td>
+			<td><%= event.description %></td>
+			<td><%= event.traffic_pattern.name %></td>
+			<td><%= event.status.name %></td>
+			<td class="actions">
+				<%= render(:partial => "shared/action_links", :locals => {:id => event.id, :controller => "events", :actions => ["show", "edit", "delete"]}) %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>
+
+<script>
+	$(function () {
+		// Table filtering library options
+		var tableFilters = {
+				col_10: "none",
+				rows_counter: true,
+				rows_counter_text: "Events found: ",
+				alternate_rows: true
+			}
+		setFilterGrid("listing", tableFilters);	// Adds filtering row to top of table
+	});	
+</script>
+
+<div class="debug">
+	<hr/>
+	events RAW DATA:<br/>
+	<%= @events.inspect %> <!-- View parameters for the page -->
+</div>

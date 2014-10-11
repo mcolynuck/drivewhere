@@ -1,0 +1,57 @@
+ <% @page_title = "Edit Event" %>
+
+<div class="menu">
+	<%= render(:partial => "shared/action_links", :locals => {:id => @event.id, :controller => "events", :actions => ["list","new","delete"]}) %>
+</div>
+
+<%= form_for(:event, :url => {:action => 'update', :id => params[:id]}) do |i| %>
+  	<div class="event_edit">
+    	<h2>Edit Event</h2>
+    	<div class="content_edit">
+			<div class="inputs">
+	      		<%= render(:partial => "input_form", :locals => {:@related => @related, :i => i}) %>
+	    	</div>
+	  		<div id="mapdiv" class="mapdiv">
+  				<div id="maptop">
+  	  	  			<span id="map_instructions">Click in map to place marker or enter coordinates and click 'Add Marker'</span>
+    	  				<%= link_to "Delete Marker", '#', :id => "del_marker", :class => "del_marker linkBtn" %>
+  				</div>
+  				<div id="mapbottom">
+  		  			<div id="map" class="map"></div>
+  				</div>
+	  		</div>
+    	</div>
+  	</div>
+  	<div id="submit_div">
+  		<div class="center width_150">
+  			<%= submit_tag("Save") %>
+  		</div>
+  	</div>
+<% end %>
+
+<script>
+  function addMarker(coords, zoomLvl){
+      editMap.addMarker(coords, zoomLvl);
+  }
+
+  $(function () {
+    // Maximize map in surrounding div.    
+    $("#map").width($(".mapdiv").width());
+    $("#map").height($(".mapdiv").height() - $(".maptop").height());
+
+    editMap = new Map($("#map").get(0));
+    editMap.enableListeners([editMap.LISTENER_MARKER_DRAGDROP, editMap.LISTENER_MAP_CLICK], $("#coords"));
+
+    // Should work for point and multipoint but no other types yet.
+    <% @event.location.geom.each {|g| %>
+      <%= raw 'editMap.addMarker("'+g.y.to_s+' '+g.x.to_s+'", 17, true);' %>
+    <% } %>
+  });
+
+	$(document).on("page:load ready", edit_events_ready);
+</script>
+
+<div class="debug">
+	<hr/>
+	<%= params.inspect %> <!-- View parameters for the page -->
+</div>

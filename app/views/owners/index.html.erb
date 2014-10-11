@@ -1,0 +1,47 @@
+<% @page_title = "Owner Index" %>
+
+<div class="menu">
+  	<%= render(:partial => "shared/action_links", :locals => {:actions => ["home", "events", "users"]}) %>
+</div>
+
+<div class="owners_index">
+	<h2>Owner Index</h2>
+	<div class="owner_index">
+		<div class="data_table">
+			<div>
+				<div id="found"><%= pluralize(@owners.size, 'Owner') %> found</div>
+				<div class="add_new"><%= link_to("Add New Owner", {:action => 'new'}, :class => 'action_new linkBtn') %></div>
+			</div>
+			<table class="listing" summary="Owner List">
+				<tr class="header">
+					<th>Name</th>
+					<th>Description</th>
+					<th>City</th>
+					<th>Region</th>
+					<th>Country</th>
+					<th>Active</th>
+					<th>Actions</th>
+				</tr>
+				<% @owners.each do |owner| %>
+				<tr class="<%= cycle('odd', 'even') %>">
+					<td><%= owner.name %></td>
+					<td><%= owner.description %></td>
+					<td><%= owner.city %></td>
+					<td><%= owner.region %></td>
+					<td><%= owner.country %></td>
+					<td class="active_<%= owner.active?.to_s %>"><%= owner.active?.to_s %></td>
+					<td class="actions">
+						<%= render(:partial => "shared/action_links", :locals => {:id => owner.id, :controller => "owners", :actions => ["show", "edit", "delete"]}) %>
+					</td>
+				</tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="debug">
+	<hr/>
+	owners RAW DATA:<br/>
+	<%= @owners.inspect %> <!-- View parameters for the page -->
+</div>
