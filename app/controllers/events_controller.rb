@@ -22,6 +22,12 @@ class EventsController < ApplicationController
 
 
   def show
+#TODO: Replace code in show.html to loop on collection of gemoetries when spatial db used.
+#    // Should work for point and multipoint but no other types yet.
+#    <% @event.location.each {|g| %>
+#      <%= raw 'showMap.addMarker("'+g.latitude.to_s+' '+g.longitude.to_s+'", 17, true);' %>
+#    <% } %>
+
     @event = Event.find(params[:id])
     if !@event
       flash[:warning] = "Could not find event with id [#{params[:id]}]"
@@ -65,10 +71,11 @@ class EventsController < ApplicationController
       render("new")
     else
       # Add geography to location table
-      factory = Location.rgeo_factory_for_column(:geom)
-      geom = Location.create(:geom => factory.collection(
-            [factory.point(coords[1],coords[0])]),    # coord order: x (longitude), y (latitude)
-            :created_by => session[:user_name])
+      # factory = Location.rgeo_factory_for_column(:geom)
+      # geom = Location.create(:geom => factory.collection(
+      #       [factory.point(coords[1],coords[0])]),    # coord order: x (longitude), y (latitude)
+      #       :created_by => session[:user_name])
+      geom = Location.create(:latitude => coords[0].to_f, :longitude => coords[1].to_f, :created_by => session[:user_name])  # Non-spaital database
       if !geom
         render(:action => 'new')
       else
@@ -91,7 +98,8 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @related = get_related
     @owner_prefs = get_owner_prefs
-    @coords = @event.location.geom.geometry_n(0).y.to_s + ' ' + @event.location.geom.geometry_n(0).x.to_s
+    # @coords = @event.location.geom.geometry_n(0).y.to_s + ' ' + @event.location.geom.geometry_n(0).x.to_s
+    @coords = @event.location.latitude.to_s + " " + @event.location.longitude.to_s
 
     if !@event
       flash[:warning] = "Could not find event with id [#{params[:id]}]"
@@ -119,8 +127,9 @@ class EventsController < ApplicationController
         redirect_to(:action => "edit", :id => @event.id)
       else
         # Add geography to location table
-        factory = Location.rgeo_factory_for_column(:geom)
-        geom = @event.location.update_attributes(:geom => factory.collection([factory.point(coords[1],coords[0])]), :updated_by => session[:user_name])
+        # factory = Location.rgeo_factory_for_column(:geom)
+        # geom = @event.location.update_attributes(:geom => factory.collection([factory.point(coords[1],coords[0])]), :updated_by => session[:user_name])
+        geom = @event.location.update_attributes(:latitude => coords[0].to_f, :longitude => coords[1].to_f, :updated_by => session[:user_name])
         if !geom
           flash[:error] = "Error saving location data"
           render(:action => 'new')

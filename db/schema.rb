@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141008130133) do
+ActiveRecord::Schema.define(version: 20141015181134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,14 +70,13 @@ ActiveRecord::Schema.define(version: 20141008130133) do
   add_index "events_roles", ["role_id", "event_id"], :name => "index_events_roles_on_role_id_and_event_id"
 
   create_table "locations", force: true do |t|
+    t.float    "latitude"
+    t.float    "longitude"
     t.text     "created_by"
     t.text     "updated_by"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.spatial  "geom",       limit: {:srid=>0, :type=>"geometry"}
   end
-
-  add_index "locations", ["geom"], :name => "index_locations_on_geom", :spatial => true
 
   create_table "owner_districts", id: false, force: true do |t|
     t.integer  "owner_id"

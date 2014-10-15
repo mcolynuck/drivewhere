@@ -1,8 +1,10 @@
 class PublicController < ApplicationController
 	layout "public"
 	def index
-	    @events = Event.all
-	    @event = Event.new() if @event.nil?	 # Don't overwrite user input if already in memory.
+		status = Status.find_by_name("Publish")
+		@events = Event.where("status_id = ?", status.id)
+	    # @events = Event.find_by_status_id(status.id)
+	    @event = Event.new() if @events.nil?	 # Don't overwrite user input if already in memory.
 	    @related = get_related
 	    @coords = ""
 
@@ -38,9 +40,10 @@ class PublicController < ApplicationController
 	    else
 	      # Add geography to location table
 	      factory = Location.rgeo_factory_for_column(:geom)
-	      geom = Location.create(:geom => factory.collection(
-	            [factory.point(coords[1],coords[0])]),    # coord order: x (longitude), y (latitude)
-	            :created_by => session[:user_name])
+	      # geom = Location.create(:geom => factory.collection(
+	      #       [factory.point(coords[1],coords[0])]),    # coord order: x (longitude), y (latitude)
+	      #       :created_by => "public")
+		  geom = Location.create(:latitude => coords[0].to_f, :longitude => coords[1].to_f, :created_by => "public")
 	      if !geom
 	      	flash[:error] = "Error creating point record.  Your report was not saved."
 			redirect_to :action => :index

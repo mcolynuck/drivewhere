@@ -112,12 +112,15 @@ OwnerStatus.create(:owner_id => 2, :status_id => 1)
 OwnerStatus.create(:owner_id => 2, :status_id => 2)
 OwnerStatus.create(:owner_id => 2, :status_id => 3)
 
-factory = Location.rgeo_factory_for_column(:geom)
-Location.create(:geom => factory.collection([factory.point(-122.79273772239685, 49.04487974750465)]), :created_by => "jkrowling")
-Location.create(:geom => factory.collection([factory.point(-122.20872587841802, 49.07978759807272)]), :created_by => "jlucas")
-Location.create(:geom => factory.collection([factory.point(-123.38937800377607, 48.537572212952185)]), :created_by => "public")
+#factory = Location.rgeo_factory_for_column(:geom)
+#Location.create(:geom => factory.collection([factory.point(-122.79273772239685, 49.04487974750465)]), :created_by => "jkrowling")
+#Location.create(:geom => factory.collection([factory.point(-122.20872587841802, 49.07978759807272)]), :created_by => "jlucas")
+#Location.create(:geom => factory.collection([factory.point(-123.38937800377607, 48.537572212952185)]), :created_by => "public")
+# These records use float columns for lat/lon values and not a geometry column as above.
+Location.create(:latitude => 49.04487974750465, :longitude => -122.79273772239685, :created_by => "jkrowling")
+Location.create(:latitude => 49.07978759807272, :longitude => -122.20872587841802, :created_by => "jlucas")
+Location.create(:latitude => 48.537572212952185, :longitude => -123.38937800377607, :created_by => "public")
 
-
-Event.create(:road => "Hwy 1", :district_id => 2, :direction_id => 1, :event_type_id => 1, :severity_id => 2, :traffic_pattern_id => 7, :start_date => 42.hours.ago, :title => "Cart blocking roadway", :description => "A cart full of magic pumpkins lost a wheel and spread everything all over the road making a bloody mess of things.", :owner_id => 2, :status_id => 2, :location_id => 2, :created_by => "jkrowling")
-Event.create(:road => "Hwy 2", :district_id => 3, :direction_id => 1, :event_type_id => 2, :severity_id => 3, :traffic_pattern_id => 3, :start_date => 34.hour.ago, :title => "Dragon fire", :description => "A dragon has caused the village to be on fire.", :owner_id => 3, :status_id => 3, :location_id => 3, :created_by => "jlucas")
+Event.create(:road => "Hwy 1", :district_id => 2, :direction_id => 1, :event_type_id => 1, :severity_id => 2, :traffic_pattern_id => 7, :start_date => 42.hours.ago, :title => "Cart blocking roadway", :description => "A cart full of magic pumpkins lost a wheel and spread everything all over the road making a bloody mess of things.", :owner_id => 2, :status_id => 2, :location_id => 1, :created_by => "jkrowling")
+Event.create(:road => "Hwy 2", :district_id => 3, :direction_id => 1, :event_type_id => 2, :severity_id => 3, :traffic_pattern_id => 3, :start_date => 34.hour.ago, :title => "Dragon fire", :description => "A dragon has caused the village to be on fire.", :owner_id => 3, :status_id => 3, :location_id => 2, :created_by => "jlucas")
 Event.create(:road => "Pat Bay Hwy", :district_id => 1, :direction_id => 4, :event_type_id => 3, :severity_id => 3, :traffic_pattern_id => 2, :start_date => 1.hour.ago, :title => "Head-on collision", :description => "A car ran a red light at the Elk Lake intersection and hit another car heading south.", :owner_id => 1, :status_id => 4, :location_id => 3, :created_by => "public")

@@ -104,10 +104,8 @@
 
     showMap = new Map($("#map").get(0));
 
-    // Should work for point and multipoint but no other types yet.
-    <% @event.location.geom.each {|g| %>
-      <%= raw 'showMap.addMarker("'+g.y.to_s+' '+g.x.to_s+'", 17, true);' %>
-    <% } %>
+    // Only for non-spatial db.  Check location.rb for code to replace the following line.
+    <%= raw 'showMap.addMarker("'+@event.location.geom_coords+'", 17, true);' %>
   });
 
   $(document).on("page:load ready", show_events_ready);

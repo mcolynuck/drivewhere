@@ -42,10 +42,8 @@
     editMap = new Map($("#map").get(0));
     editMap.enableListeners([editMap.LISTENER_MARKER_DRAGDROP, editMap.LISTENER_MAP_CLICK], $("#coords"));
 
-    // Should work for point and multipoint but no other types yet.
-    <% @event.location.geom.each {|g| %>
-      <%= raw 'editMap.addMarker("'+g.y.to_s+' '+g.x.to_s+'", 17, true);' %>
-    <% } %>
+    // Only for non-spatial db
+    <%= raw 'editMap.addMarker("'+@event.location.geom_coords+'", 17, true);' %>
   });
 
 	$(document).on("page:load ready", edit_events_ready);

@@ -1,6 +1,3 @@
-Filter Grid
-	-Error if 1 record (or maybe when none?)
-
 Event records
 	-end date in the past
 		-Add validation that end > start
