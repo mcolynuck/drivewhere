@@ -1,4 +1,4 @@
-# class GeomToText < ActiveRecord::Migration
+class GeomToText < ActiveRecord::Migration
 #   def up
 #   	drop_table :locations
 #     create_table :locations do |t|
@@ -22,4 +22,4 @@
 #         t.index "geom", :spatial => true
 #     end
 #   end
-# end
+end

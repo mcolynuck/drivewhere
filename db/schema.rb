@@ -180,7 +180,7 @@ ActiveRecord::Schema.define(version: 20141015181134) do
   create_table "users", force: true do |t|
     t.text     "name",                                            null: false
     t.text     "password_digest",                                 null: false
-    t.datetime "expiry",          default: '2014-10-11 05:12:34', null: false
+    t.datetime "expiry",          default: '2014-10-16 05:21:54', null: false
     t.boolean  "active",          default: true
     t.integer  "owner_id"
     t.integer  "role_id"

@@ -1,3 +1,18 @@
+class CreateLocations < ActiveRecord::Migration
+  def up
+    create_table :locations do |t|
+      t.float  :latitude
+      t.float  :longitude
+      t.text    :created_by
+      t.text    :updated_by
+      t.timestamps
+    end
+  end
+
+  def down
+    drop_table :locations
+  end
+end
 # class CreateLocations < ActiveRecord::Migration
 #   def up
 #     create_table :locations do |t|
@@ -15,20 +30,3 @@
 #   	drop_table(:locations)
 #   end
 # end
-
-# This is only for non-spatial postgres database
-class GeomToText < ActiveRecord::Migration
-  def up
-    create_table :locations do |t|
-      t.float  :latitude
-      t.float  :longitude
-      t.text    :created_by
-      t.text    :updated_by
-      t.timestamps
-    end
-  end
-
-  def down
-    drop_table :locations
-  end
-end
