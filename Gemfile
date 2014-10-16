@@ -8,9 +8,6 @@ gem 'rails', '4.1.5'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# For Heroku deployment (and maybe others?)
-gem 'rails_12factor'
-
 # Required for spatial data
 gem 'rgeo'
 gem 'activerecord-postgis-adapter'
@@ -47,3 +44,8 @@ gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+group :production do
+	# For Heroku platform deployment
+	gem 'rails_12factor'
+end

@@ -15,8 +15,9 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgis
-  postgis_extension: postgis
+  adapter: postgresql
+#  adapter: postgis
+#  postgis_extension: postgis
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -47,7 +48,8 @@ development:
   port: 5432
 
   # Schema search path. The server defaults to $user,public
-  schema_search_path: public,postgis
+ # schema_search_path: public,postgis
+  schema_search_path: public
 
   script_dir: "C:/Program Files/PostgreSQL/9.3/share/contrib/postgis-2.1"
 
@@ -86,5 +88,5 @@ test:
 production:
   <<: *default
   database: drivewhere_production
-  username: drivewhere
+#  username: drivewhere
   password: <%= ENV['DRIVEWHERE_DATABASE_PASSWORD'] %>
