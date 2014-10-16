@@ -1,0 +1,87 @@
+This file outlines the steps required to setup Postgres to run with this rails project.
+
+The free Heroku deployment platform does not provide the spatial database plugin so the work-around
+was to use latitude and longitude values instead of the spatial column.  Do not create a spatial databse
+for development as oulined below until we deal with this issue in the future.
+
+For more detailed information:
+	Refer to http://www.waratuman.com/2012/10/26/postgis_and_rails/
+	Refer to https://github.com/rgeo/activerecord-postgis-adapter  (for spatial database)
+
+================================================================================================
+
+1) Download and install postgres and add the additional spatial plugin
+	If adding the spatial plugin after postgres installation, use the stack builder utility provided.
+
+	-Create a new db role for 'drivewhere'
+	-Create a new database
+		-If using a spatial database, you will also need to add the following extensions if they are
+		 not put there automatically:
+		 	-address_standardizer
+		 	-fuzzystrmatch
+		 	-pgrouting
+		 	-plpgsql
+		 	-postgis
+		 	-postgis_tiger_geocoder
+		 	-postgis_topology
+	-Create a new server connection for the rails application to use.
+		-Use default port
+		-Use drivewhere role
+		-username/password info to use are found in steps below.
+
+2) Reinstall the rails 'pg' gem (may not be necessary, but was suggested to do it)
+
+3) If using a spatial database, install the gems 'rgeo' and 'activerecord-postgis-adapter'
+
+4) Add/check for the following lines to the Gemfile.  (Ignore if checking out source code)
+	gem 'pg'
+
+	If using a spatial database, also include:
+	gem 'rgeo'
+	gem 'activerecord-postgis-adapter'
+
+	Note: The line "gem 'pg'" was already in the file as I indicated postgres as the database type when I created the project.
+
+5) Run the following command from the project root directory:
+	bundle install
+
+6) Add the following line to the config/application.rb file:  (Ignore if checking out existing code)
+	require 'active_record/connection_adapters/postgis_adapter/railtie'
+
+7) Add/modify the following lines in the database.yml file for local development, some of these will
+   be located under the 'development' section.  There is information for use with spatial and non-spatial
+   databases and for deployment on Heroku:  (Ignore if checking out source code)
+
+	For NON-SPATIAL database, use the following settings:
+	------------------------------------------------------------
+	  adapter: postgresql
+	  database: drivewhere
+	  username: drivewhere
+	  su_username: drivewhere_su
+	  password: <pasword>
+	  su_password: <password>
+  	  script_dir: "<your path to the postgis plugin directory>/postgis-2.1"
+	------------------------------------------------------------
+
+    For SPATIAL database, use the following settings:
+	------------------------------------------------------------
+	  adapter: postgis
+  	  postgis_extension: postgis
+  	  schema_search_path: public,postgis
+  	  username: drivewhere
+  	  password: <password>
+  	  su_username: drivewhere_su
+  	  su_password: <password>
+  	  script_dir: "<your path to the postgis plugin directory>/postgis-2.1"
+	------------------------------------------------------------
+
+    For Heroku deployment, put these settings under the 'Production' section:
+	------------------------------------------------------------
+  		password: <%= ENV['DRIVEWHERE_DATABASE_PASSWORD'] %>
+	------------------------------------------------------------
+	Remove/remark out the production 'username' line as this is set by Heroku.
+
+8) You can now run the rake command to create the database tables and seed the code tables (and sample data).
+   Execute from the project root directory:
+	rake db:schema:load
+	rake db:seed

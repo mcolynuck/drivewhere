@@ -1,5 +1,7 @@
 == README
 
+Other useful documents can be found in the 'docs' directory.
+
 DriveWhere application - Phase 1 version
 	-Database data is only in English in this version.  
 		-Multiple languages should be planned for in future versions.
@@ -10,14 +12,16 @@ DriveWhere application - Phase 1 version
 * System dependencies:
 	-Postgres and PostGIS plugin:
 		gems: pg, rgeo, activerecord-postgis-adapter
+	-Deployment to Heroku required that we not use sptaial PostGIS so you can skip this part.
 
 * Configuration:
-	-Postgres and PostGIS
-		-See contents of postgres_setup_notes.txt
+	-See contents of /docs/postgres_setup_notes.txt
+	-For Heroku, no spatial database is used so skip PostGIS.
 
 * Database creation:
-	-An existing 'drivewhere' postgres server connection with an geospatially enabled 'drivewhere' database.
+	-An existing 'drivewhere' postgres server connection.
 	-All tables are created via this applications schema file using rake utility.
+	-See contents of /docs/postgres_setup_notes.txt for more information.
 
 * Database initialization:
 	-Use rake command from root of this application to create the required tables:
@@ -26,12 +30,16 @@ DriveWhere application - Phase 1 version
 		rake db:migrate
 	-Populate code lookup tables with seed data:
 		rake db:seed
+	 Note: Do not seed database if it already has data since it will duplicate data already there.
 
 * How to run the test suite
+	-Not yet used.
 
 * Services (job queues, cache servers, search engines, etc.)
+	-Not yet used.
 
 * Deployment instructions
+	-Heroku deployment instructions in /docs/Heroku Deployment.txt
 
 * ...
 

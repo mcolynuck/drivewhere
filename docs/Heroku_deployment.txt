@@ -1,0 +1,118 @@
+This file contains information related to the Heroku platform and running locally using the
+same environemnt as used on the website to verify your runtime code.
+
+
+-----------------
+LOGIN CREDENTIALS
+-----------------
+Email: drivewhere@yahoo.ca
+Password: Dr!veWh3r3NrG
+
+Deployment URL: 
+http://drivewhere.herokuapp.com/
+http://drivewhere.herokuapp.com/admin/
+
+
+
+---------------------------------
+SETTING UP TO USE HEROKU PLATFORM
+---------------------------------
+Install Heroku toolbelt (found on the Heroku website)
+	-This installs an older ruby within it's directory.
+	-It can install git if option selected (custom install option)
+
+Install the following gems used to run the app on a local system with the same 
+environment and configuration as it runs on Heroku.
+	-foreman
+	-taps
+
+To start the local server:
+	foreman start
+
+If there are no errors, you can start the app locally at the urls:
+	localhost:5000
+	localhost:5000/admin
+
+
+
+---------------------------
+LOGGING INTO HEROKU WEBSITE
+---------------------------
+To log into heroku: 
+	heroku login
+
+You will be prompted for the email and password.
+
+Note: You may be told the secret key is not found and asked if you want to generate it.
+I generated it by entering 'yes'.  I also found that when I tried to log into Heroku
+using a Git Bash screen, that it did not find this secret and would fail.  The normal
+command window had no problem but that's the window I used to generate the secret so 
+I'd suggest logging in the first time in the window type you plan to normally use.
+
+
+
+------------------------------------------------
+COMMITTING FILE CHANGES TO THE HEROKU DEPLOYMENT
+------------------------------------------------
+Use the normal Git commands to commit locally any files you intend to migrate up to Heroku.
+You must be logged into Heroku before pushing changes to the platform.
+
+To add files to deployment: 
+	git add .
+
+To commit changes with a comment: 
+	git commit -m "A comment here"
+	
+To push files to the Heroku platform:
+	git push heroku master
+
+To make sure it deployed correctly on Heroku:
+	heroku ps:scale web=1
+
+Open the website either using the project url or using this command:
+	heroku open
+
+To run new migrations on Heroku:
+	heroku run rake db:migrate
+
+
+
+---------------------------------
+VIEWING RELEASES AND ROLLING BACK
+---------------------------------
+You can view releases on Heroku and roll back to one using the following steps.
+	-View releases deployed to heroku
+		heroku releases
+
+	-Rolling back to a release
+		heroku releases:rollback v102
+	 Note: 'v102' value is the version id visible when viewing the releases.
+
+
+
+-----------------------------------
+LOG FILES AND ENVIRONMENT VARIABLES
+-----------------------------------
+To view the Heroku deployed application log file:
+	heroku logs 
+	Note: Optionally, add the option '-tail' to view only the last few lines.
+
+To start the Rails console on Heroku:
+	heroku run rails console
+
+To exit console:
+	exit
+
+To set an envrionment variable:
+	In the Heroku deployment:
+		heroku config:set TIMES=10
+
+	In your local deployment:
+		-Add settings to a file in the root directory named '.env'
+		-This file is read when starting 'foreman' utility.
+
+To view the current config variables on Heroku:
+	heroku config
+
+To view information on postgres on Heroku:
+	heroku pg
