@@ -1,3 +1,19 @@
+Replace admin screens with active_admin gem (or newer gem)?
+	http://railscasts.com/episodes/284-active-admin
+
+Replace tables with jquery DataTables?
+	http://railscasts.com/episodes/340-datatables
+
+Incorporate responsive css (bootstrap?)
+	http://railscasts.com/episodes/328-twitter-bootstrap-basics
+
+Get/Put requests to api instead of direct db interaction
+	// Javascript jquery call to api
+	$.getJSON('/api_action', function(data){
+		// Use data returned
+	})
+	-How to do this with Ruby code on the server side?
+
 Event records
 	-end date in the past
 		-Add validation that end > start
@@ -33,9 +49,10 @@ Flash messages
 	-should be located below menu and above title
 		-shared resource
 
-How to clear session user name/id/role when starting app or shutting it down?
-
 Create user
 	-jquery to show/hide fields instead of code in _input_form.html.erb
 
 -User preferences page
+	Multi-selectable lists or checkboxes?
+		-reordering?
+		-Creating custom values?

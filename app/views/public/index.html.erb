@@ -4,11 +4,14 @@
 	<span id="_map" class="tab_item tab_active">Map</span><span id="_events" class="tab_item">Events</span><span id="_report" class="tab_item" onclick="report_menu_clicked();">Report</span>
 </div>
 
-<div id="content_map" class="" style="">
-	<div id="maparea" class="left_side">
+<div id="content_map">
+	<div id="maparea" class="maparea">
 		<div id="map" class="mapdiv"></div>
 	</div>
-	<div id="sidebar" class="right_side">
+	<div id="sidebar" class="sidebar">
+	    <a class="handle" href="void()">Options</a>
+	    <h3>Map Layers</h3>
+	    <hr/>
 		<ul>
 			<li>
 				<%= label_tag("weather_layer"); %>
@@ -22,7 +25,7 @@
 	</div>
 </div>
 
-<div id="content_events" class="" style="display:none;">
+<div id="content_events" style="display:none;">
 	<h2>Events</h2>
 	<div>
 		<div id="found"><%= pluralize(@events.size, 'Event') %> found</div>
@@ -83,15 +86,13 @@
 				</div>
 
 			  	<div id="submit_div">
-			  		<div class="center width_150">
-			  			<%= submit_tag("Report") %>
-			  		</div>
+		  			<%= submit_tag("Report") %>
 			  	</div>
 			<% end %>
 		</div>
 		<div id="report_map_content">
-			<div>Click on the map to place a marker. You can re-click or move the marker as necessary.</div>
-  			<div id="report_map" class=""></div>
+			<div class="map_instruct">Click on the map to place a marker. You can re-click or move the marker as necessary.</div>
+  			<div id="report_map" class="report_map"></div>
 		</div>
 
 		<!-- Data for javascript -->
@@ -100,67 +101,18 @@
 </div>
 
 <script>
-	$(function () {
-		// Resizes div and creates map.
-		function initMap(){
-			if(!publicMap){		// Only do this once.
-				if(resizeMap()){	// False if not visible.
-					var marker = null;
-					publicMap = new Map($("#map").get(0));
-    				publicMap.enableListeners([publicMap.LISTENER_MARKER_CLICK], $("#coords"));
-				
-				    // Should work for point and multipoint but no other types yet.
-				    <% Event.all.each {|e| %>
-				    	<% if e.published? %>
-				      		<%= raw 'marker = publicMap.addMarker("'+e.location.geom_coords+'", null, false, "' + e.title + '", ' + "'" + e.format + "');" %>
-				      	<% end %>
-				    <% } %>
-				
-					publicMap.showAllMarkers();
-				    $(window).resize(resizeMap);		// If window resizes, resize map
-				}
-			}
-		}
-
-
-		// Check if map is visible before creating and resizing the div element.
-		if ($("#content_map").is(':visible')){
-			initMap();
-		} else {
-			$("#_map").on("click", function(event){
-				if(!publicMap){		// If not yet created, try to create it.
-					window.setTimeout(initMap, 100);
-				}
-			});
-		}
-
-
-	});
+	$(document).on("page:load ready", public_ready);	// Call function when page loads.
 
 
 	/**
-	 * Delay loading the map immediately as the google library may not be loaded for a few millisecionds.
-	 * Only has to be done once.
+	 * Adds markers from ruby array which is why this must be in the html and not js file.
 	 */
-	var waited = false;
-	function report_menu_clicked(){
-		function wait_for_it(){
-			if($("#report_map_content").is(':visible')){
-		    	$("#report_map").width("700");
-		    	$("#report_map").height("405");
-
-	    		reportMap = new Map($("#report_map").get(0));
-	   		    reportMap.enableListeners([reportMap.LISTENER_MARKER_DRAGDROP, reportMap.LISTENER_MAP_CLICK], $("#coords"));
-	    	} else {
-	    		wait_timer = window.setTimeout(wait_for_it, 100);
-	    	}
-	    }
-	    if(!waited){	// Prevent if we've already done this.
-	    	waited = true;
-	    	wait_for_it();
-	    }
+	function addMarkers(){
+	    // Should work for point and multipoint but no other types yet.
+	    <% Event.all.each {|e| %>
+	    	<% if e.published? %>
+	      		<%= raw 'marker = publicMap.addMarker("'+e.location.geom_coords+'", null, false, "' + e.title + '", ' + "'" + e.format + "');" %>
+	      	<% end %>
+	    <% } %>		
 	}
-
-
-	$(document).on("page:load ready", public_ready);	// Call function when page loads.
 </script>

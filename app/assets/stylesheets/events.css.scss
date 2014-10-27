@@ -70,6 +70,7 @@
 }
 
 
+/* This needs to be nested to avoid namespace conflict! */
 .mapdiv {
 	display: inline-block;
 	*display: inline;

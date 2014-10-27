@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"inner",
+				"innerWidth  (variable)"
+			],
+			[
 				"im",
 				"!important  (value)"
 			],
@@ -176,35 +180,36 @@
 	"buffers":
 	[
 		{
-			"file": "todo.txt",
+			"file": "app/views/public/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 1159,
-				"line_ending": "Windows"
+				"buffer_size": 4855,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "My Tasks.txt",
+			"file": "app/assets/stylesheets/public.css.scss",
 			"settings":
 			{
-				"buffer_size": 1096,
-				"line_ending": "Windows"
+				"buffer_size": 1435,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/temp/stock_picks.txt",
+			"file": "app/assets/javascripts/public.js",
 			"settings":
 			{
-				"buffer_size": 678,
-				"line_ending": "Windows"
+				"buffer_size": 2348,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/My Documents/Recipies/Pizza dough - 2 ingredients.txt",
+			"file": "/D/My Documents/DriveWhere/TomTom_LiveTrafficInfo.txt",
 			"settings":
 			{
-				"buffer_size": 2149,
-				"line_ending": "Windows"
+				"buffer_size": 2740,
+				"line_ending": "Windows",
+				"name": "TomTom Live Traffic API Call:"
 			}
 		}
 	],
@@ -243,9 +248,59 @@
 	},
 	"file_history":
 	[
-		"/D/devel/www/drivewhere/config/database.yml",
-		"/D/devel/www/drivewhere/Procfile",
+		"/D/My Documents/Recipies/Pizza dough - 2 ingredients.3-stars.txt",
+		"/D/devel/www/drivewhere/app/views/public/index.html.erb",
+		"/D/devel/www/drivewhere/app/views/public/backup.index_html.txt",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/events.css.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.5.1/app/assets/stylesheets/settings/_visual-grid.scss",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/_variables.scss",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/application.css.scss",
+		"/D/devel/www/drivewhere/app/assets/stylesheets/access.css.scss",
+		"/C/temp/stock_picks.txt",
+		"/D/devel/www/drivewhere/docs/website_todo.txt",
+		"/D/devel/www/drivewhere/vendor/assets/stylesheets/neat/settings/_visual-grid.scss",
+		"/D/devel/www/drivewhere/app/views/layouts/application.html.erb",
 		"/D/devel/www/drivewhere/Gemfile",
+		"/D/devel/www/drivewhere/Gemfile.lock",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_visual-grid.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_outer-container.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/_neat.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/settings/_grid.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_omega.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_private.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_pad.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_row.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_span-columns.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_shift.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_to-deprecate.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_box-sizing.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_direction-context.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_display-context.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_visual-grid.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_fill-parent.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/grid/_media.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/_neat-helpers.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/app/assets/stylesheets/settings/_visual-grid.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.7.0/spec/neat/default_spec.rb",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/bourbon-4.0.2/app/assets/stylesheets/_bourbon.scss",
+		"/D/devel/Ruby200/lib/ruby/gems/2.0.0/gems/bourbon-3.2.3/app/assets/stylesheets/functions/_grid-width.scss",
+		"/D/devel/www/drivewhere/app/views/layouts/public.html.erb",
+		"/D/source/jquery_tabslide/index.html",
+		"/D/devel/www/drivewhere/vendor/assets/javascripts/jquery.tabSlideOut.v1.3.js",
+		"/D/devel/www/drivewhere/app/assets/javascripts/application.js",
+		"/D/My Documents/45 Life Lessons.txt",
+		"/C/WINDOWS/system32/drivers/etc/hosts",
+		"/G/Video/Porn/Schoolgirl-sucks-penis-at-teacher-in-school/PLAY-MOVIE.html",
+		"/G/Video/Porn/Schoolgirl-sucks-penis-at-teacher-in-school/Schoolgirl-sucks-penis-at-teacher-in-school.swf",
+		"/D/devel/www/drivewhere/docs/Heroku_deployment.txt",
+		"/D/devel/www/drivewhere/docs/postgres_setup.txt",
+		"/D/devel/www/drivewhere/README.rdoc",
+		"/D/devel/www/drivewhere/erd.dot",
+		"/D/devel/www/drivewhere/Procfile",
+		"/D/devel/www/drivewhere/doc/Heroku Notes.txt",
+		"/D/devel/www/drivewhere/My Tasks.txt",
+		"/D/devel/www/drivewhere/config/database.yml",
 		"/D/devel/www/drivewhere/db/migrate/20140921032931_create_locations.rb",
 		"/D/devel/www/drivewhere/db/migrate/20141015181134_geom_to_text.rb",
 		"/C/Program Files/Heroku/ruby-1.9.3/lib/ruby/site_ruby/1.9.1/rubygems/custom_require.rb",
@@ -262,7 +317,6 @@
 		"/D/devel/www/drivewhere/app/controllers/events_controller.rb",
 		"/D/devel/www/drivewhere/app/models/location.rb",
 		"/D/devel/www/drivewhere/db/seeds.rb",
-		"/D/devel/www/drivewhere/app/views/public/index.html.erb",
 		"/D/devel/www/drivewhere/app/controllers/public_controller.rb",
 		"/D/devel/www/drivewhere/db/schema.rb",
 		"/C/.gitconfig",
@@ -285,10 +339,7 @@
 		"/D/devel/www/drivewhere/app/views/events/filtergrid.css",
 		"/D/devel/www/drivewhere/app/views/events/new.html.erb",
 		"/D/devel/www/drivewhere/app/views/events/_input_form.html.erb",
-		"/D/devel/www/drivewhere/app/assets/stylesheets/events.css.scss",
-		"/D/devel/www/drivewhere/app/assets/javascripts/application.js",
 		"/D/devel/www/drivewhere/app/assets/stylesheets/filtergrid.css",
-		"/D/devel/www/drivewhere/app/assets/stylesheets/application.css.scss",
 		"/D/devel/www/drivewhere/app/views/layouts/event.html.erb",
 		"/D/devel/www/drivewhere/app/views/layouts/admin.html.erb",
 		"/D/devel/www/drivewhere/app/assets/stylesheets/public.css.scss",
@@ -306,11 +357,8 @@
 		"/D/devel/www/drivewhere/app/views/events/delete.html.erb",
 		"/D/devel/www/drivewhere/db/migrate/20140916231602_create_events.rb",
 		"/D/devel/www/drivewhere/test/models/role__user_test.rb",
-		"/D/devel/www/drivewhere/app/views/layouts/public.html.erb",
-		"/D/devel/www/drivewhere/app/views/layouts/application.html.erb",
 		"/D/devel/www/drivewhere/app/assets/javascripts/map.bak",
 		"/D/devel/www/drivewhere/config/routes.rb",
-		"/D/devel/www/drivewhere/app/assets/stylesheets/access.css.scss",
 		"/D/devel/www/drivewhere/app/assets/javascripts/map.js.bak",
 		"/D/devel/www/drivewhere/app/views/owners/show.html.erb",
 		"/D/devel/www/drivewhere/app/views/owners/edit.html.erb",
@@ -327,50 +375,7 @@
 		"/D/devel/www/drivewhere/app/assets/stylesheets/users.css.scss",
 		"/D/source/drivebc/js/map-plugin/layersStoresMarkers.js",
 		"/D/source/drivebc/js/drivebc.js",
-		"/D/source/drivebc/js/map-plugin/driveBCMap.js",
-		"/D/source/drivebc/css/style.css",
-		"/D/source/drivebc/index.html",
-		"/D/source/drivebc/static/links.html",
-		"/D/source/drivebc/static/welcome.html",
-		"/D/devel/www/drivewhere/app/views/users/index.html.erb",
-		"/D/devel/www/drivewhere/app/views/owners/new.html.erb",
-		"/D/devel/www/drivewhere/app/views/owners/delete.html.erb",
-		"/D/devel/www/drivewhere/app/views/users/edit.html.erb",
-		"/D/devel/www/drivewhere/app/views/users/show.html.erb",
-		"/D/devel/www/drivewhere/app/views/users/resetpwd.html.erb",
-		"/D/devel/www/drivewhere/app/views/users/new.html.erb",
-		"/D/devel/www/drivewhere/app/views/users/changepwd.html.erb",
-		"/D/devel/www/drivewhere/app/views/users/delete.html.erb",
-		"/D/devel/www/drivewhere/tmp/cache/assets/development/sass/e9c83b00639342b475a247b55c35e4e1ada7a74f/application.css.scssc",
-		"/D/devel/www/drivewhere/tmp/cache/assets/development/sprockets/c13fc73ceafa45876a901b3e775b83ae",
-		"/D/devel/www/drivewhere/tmp/cache/assets/development/sprockets/bcca522c6302f184f12fe0e8a7d7e71a",
-		"/D/devel/www/drivewhere/tmp/cache/assets/development/sprockets/8ab512c9b33ac90e699b73469d71f061",
-		"/D/devel/www/drivewhere/app/helpers/application_helper.rb",
-		"/D/devel/www/drivewhere/app/helpers/users_helper.rb",
-		"/D/devel/www/drivewhere/db/migrate/20141001220811_create_users.rb",
-		"/D/devel/www/drivewhere/config/initializers/session_store.rb",
-		"/D/devel/www/drivewhere/events_table.sql",
-		"/D/devel/www/drivewhere/config.ru",
-		"/D/devel/www/drivewhere/default)",
-		"/D/devel/www/drivewhere/Super user administrator.)",
-		"/D/devel/www/drivewhere/config/initializers/assets.rb",
-		"/D/devel/www/drivewhere/app/views/users/update.html.erb",
-		"/D/devel/www/drivewhere/app/views/users/destroy.html.erb",
-		"/D/devel/www/drivewhere/app/views/users/create.html.erb",
-		"/D/devel/www/drivewhere/app/views/shared/_error_messages.html.erb",
-		"/D/devel/www/drivewhere/db/migrate/20141002045247_create_role_users.rb.hold",
-		"/D/devel/www/drivewhere/db/migrate/20141002211055_create_owner_users.rb.hold",
-		"/D/devel/www/drivewhere/app/models/owner_user.rb",
-		"/D/devel/www/drivewhere/db/migrate/20141004160857_create_statuses.rb",
-		"/D/devel/www/drivewhere/db/migrate/20141004162344_create_owner_statuses.rb",
-		"/D/devel/www/drivewhere/app/models/owner_status.rb",
-		"/D/source/drivebc/js/map-plugin/spiderfier.js",
-		"/D/devel/www/drivewhere/app/assets/javascripts/users.js.coffee",
-		"/D/source/drivebc/csrtp.html",
-		"/D/devel/www/drivewhere/app/controllers/access_controller.rb",
-		"/D/devel/www/drivewhere/app/controllers/application_controller.rb",
-		"/D/devel/www/drivewhere/Limited user who can only view event data tied to their owner id.)",
-		"/D/devel/www/drivewhere/db/migrate/20141002045247_create_role_users.rb"
+		"/D/source/drivebc/js/map-plugin/driveBCMap.js"
 	],
 	"find":
 	{
@@ -381,6 +386,11 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"D:\\devel\\www\\drivewhere\\app\\",
+			"D:\\devel\\Ruby200\\lib\\ruby\\gems\\2.0.0\\gems\\neat-1.5.1",
+			"D:\\devel\\www\\drivewhere\\app\\,D:\\devel\\Ruby200\\lib\\ruby\\gems\\2.0.0\\gems\\neat-1.5.1",
+			"D:\\devel\\www\\drivewhere\\app\\",
+			"D:\\devel\\www\\drivewhere\\app\\,D:\\devel\\Ruby200\\lib\\ruby\\gems\\2.0.0\\gems\\neat-1.7.0",
 			"D:\\devel\\www\\drivewhere\\app\\",
 			"D:\\source\\drivebc",
 			"D:\\devel\\www\\drivewhere\\app\\",
@@ -400,6 +410,33 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"mapdiv",
+			"center",
+			"width_250",
+			"width_150",
+			"width_50_precent",
+			"px_percent",
+			"tabs",
+			"tab_menu",
+			".menu",
+			"submit-div",
+			"resizeMap",
+			"resizeReportMap",
+			"bourbon",
+			"access",
+			"sass",
+			"outer-container",
+			"nclude",
+			"@enclude",
+			"sidebar",
+			"tab_menu",
+			"tab_m",
+			"main",
+			"resizeMap",
+			"resizeReportMap",
+			"wrap",
+			"handle",
+			"slide-out-div",
 			"GeomToText",
 			"dotenv",
 			"@event",
@@ -500,34 +537,7 @@
 			"confirm_user_access",
 			"event_params",
 			"confirm_user_access",
-			"accessible?",
-			"user_accessible?",
-			"event_params",
-			"update_user_params",
-			"event_params",
-			"owner_params",
-			"event_params",
-			"params",
-			"event_params",
-			"enableMarkerListener",
-			"addMarker",
-			"enableMarkerListener",
-			"addMarker",
-			"latLng",
-			"placeMarker",
-			"addMarker",
-			"enableClickListener",
-			"role_user",
-			"markerListener",
-			"clearListener",
-			"enableDragDropListener",
-			"addMarker",
-			"in_edit",
-			"in_public",
-			"console",
-			"markerListener",
-			"enableDragDropListener",
-			"\"marker\""
+			"accessible?"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -585,29 +595,432 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "todo.txt",
+					"file": "app/views/public/index.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1159,
+						"buffer_size": 4855,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								472,
+								472
 							]
 						],
 						"settings":
 						{
 							"apply_syntax_touched": true,
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/stylesheets/public.css.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1435,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/javascripts/public.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								371,
+								371
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/My Documents/DriveWhere/TomTom_LiveTrafficInfo.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2740,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64,
+								64
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"auto_name": "TomTom Live Traffic API Call:",
 							"codeintel": true,
 							"codeintel_config":
 							{
@@ -720,308 +1133,13 @@
 					},
 					"stack_index": 2,
 					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "My Tasks.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1096,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								157,
-								157
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/temp/stock_picks.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 678,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								55,
-								55
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/D/My Documents/Recipies/Pizza dough - 2 ingredients.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2149,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2149,
-								2149
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -1061,7 +1179,7 @@
 	"project": "drivewhere.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":

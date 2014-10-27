@@ -14,6 +14,8 @@ gem 'activerecord-postgis-adapter'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+#gem 'sass', '~> 3.3'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -44,6 +46,12 @@ gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+# CSS Mixins Library
+gem 'bourbon', '~> 3.2'
+
+# Bourbon responsive grid library
+gem 'neat', '~> 1.5'
 
 group :production do
 	# For Heroku platform deployment

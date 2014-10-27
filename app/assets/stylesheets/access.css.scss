@@ -2,6 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+input:not([type=submit]), textarea, select {
+	margin: 4px 0;
+	width: 20em;
+/*	display: inline-block;*/
+	display: block;
+	*display: block;
+	zoom: 1;
+}
+
+input[type=checkbox] {
+	width: 1em;
+	display: inline;
+}
+
+input[type=submit], button {
+	display: block;
+	min-width: 6px;
+	padding: 2px 3em;
+}
+
+
 .login {
 	width: 500px;
 	margin: 0 auto;

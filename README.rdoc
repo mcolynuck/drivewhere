@@ -42,7 +42,3 @@ DriveWhere application - Phase 1 version
 	-Heroku deployment instructions in /docs/Heroku Deployment.txt
 
 * ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
