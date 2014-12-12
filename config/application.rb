@@ -22,8 +22,5 @@ module Drivewhere
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
-    # Don't precompile individual scss files to avoid mixin-not-found error with bourbon library.
-    config.assets.initialize_on_precompile = false
   end
 end

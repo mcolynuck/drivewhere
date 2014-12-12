@@ -15,8 +15,7 @@ For more detailed information:
 
 	-Create a new db role for 'drivewhere'
 	-Create a new database
-		-If using a spatial database, you will also need to add the following extensions if they are
-		 not put there automatically:
+		-If using a spatial database, you will also need to add the following extensions if they are not put there automatically:
 		 	-address_standardizer
 		 	-fuzzystrmatch
 		 	-pgrouting
@@ -81,7 +80,29 @@ For more detailed information:
 	------------------------------------------------------------
 	Remove/remark out the production 'username' line as this is set by Heroku.
 
-8) You can now run the rake command to create the database tables and seed the code tables (and sample data).
+8) Make changes to schema.rb as follows:
+
+	for NON_SPATIAL database, use the following settings:
+	------------------------------------------------------------
+	 enable_extension "plpgsql"
+	 # enable_extension "postgis"
+	 # enable_extension "pgrouting"
+	 # enable_extension "postgis_topology"
+	 # enable_extension "address_standardizer"
+	 # enable_extension "fuzzystrmatch"
+	 # enable_extension "postgis_tiger_geocoder"
+
+	 for SPATIAL database, use the following settings:
+	 ------------------------------------------------------------
+	 enable_extension "plpgsql"
+	 enable_extension "postgis"
+	 enable_extension "pgrouting"
+	 enable_extension "postgis_topology"
+	 enable_extension "address_standardizer"
+	 enable_extension "fuzzystrmatch"
+	 enable_extension "postgis_tiger_geocoder"
+
+9) You can now run the rake command to create the database tables and seed the code tables (and sample data).
    Execute from the project root directory:
 	rake db:schema:load
 	rake db:seed

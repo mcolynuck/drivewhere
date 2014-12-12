@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 20141015181134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "postgis"
-  enable_extension "pgrouting"
-  enable_extension "postgis_topology"
-  enable_extension "address_standardizer"
-  enable_extension "fuzzystrmatch"
-  enable_extension "postgis_tiger_geocoder"
+ # enable_extension "postgis"
+ # enable_extension "pgrouting"
+ # enable_extension "postgis_topology"
+ # enable_extension "address_standardizer"
+ # enable_extension "fuzzystrmatch"
+ # enable_extension "postgis_tiger_geocoder"
 
   create_table "directions", force: true do |t|
     t.text "name"
