@@ -10,6 +10,7 @@ DriveWhere application - Phase 1 version
 	-Written using version 2.0.0p481
 
 * System dependencies:
+    -Install ruby DevTools package from http://rubyinstaller.org/downloads
 	-Postgres and PostGIS plugin:
 		gems: pg, rgeo, activerecord-postgis-adapter
 	-Deployment to Heroku required that we not use sptaial PostGIS so you can skip this part.
