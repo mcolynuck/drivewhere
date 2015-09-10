@@ -1,4 +1,13 @@
-== README
+
+# DriveWhere
+
+A prototype website created with Ruby on Rails.
+
+There are two parts to this website.  The public side with a map, list of events and a crowd-sourcing reporting interface, and the administration side with screens to configure not only users and their access, but settings on a per-client basis for all values related to events such as types, directions, etc.
+
+The administration interface requires a user/password to access.
+
+## Notes
 
 Other useful documents can be found in the 'docs' directory.
 
@@ -41,5 +50,3 @@ DriveWhere application - Phase 1 version
 
 * Deployment instructions
 	-Heroku deployment instructions in /docs/Heroku Deployment.txt
-
-* ...

@@ -1,0 +1,698 @@
+/* Sass plugin library */
+/* These are overrides for the neat grid layout plugin. */
+/*$visual-grid: true;	/* Set to 'true' to show shaded positioning columns */
+/*$grid-columns : 12;*/
+/* Redifines globals used by neat */
+/* line 2, D:/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Bourbon's grid framework library */
+/* Must manually import scss/css files below this line instead of normal rails automation sprocket. */
+/* line 5, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.flt {
+  /* Filter table row */
+  width: 100%  !important;
+  padding: 0  !important;
+  margin: 0  !important;
+  border: none;
+  background-color: #f0f0f0;
+  color: black;
+}
+
+/* line 13, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.fltrow {
+  border: 3px solid black;
+  background-color: #f0f0f0;
+}
+
+/* line 19, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.content_new #coords, .content_edit #coords, .content_show #coords {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+/*h2 {
+	margin-top: 0;
+}*/
+/* line 30, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.del_marker {
+  float: right;
+}
+
+/* line 34, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.event_new, .event_edit, .event_show {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  width: 100%;
+}
+/* line 40, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.event_new .inputs, .event_new .data_show, .event_edit .inputs, .event_edit .data_show, .event_show .inputs, .event_show .data_show {
+  width: 40%;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
+}
+/* line 47, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.event_new .inputs .desc, .event_new .data_show .desc, .event_edit .inputs .desc, .event_edit .data_show .desc, .event_show .inputs .desc, .event_show .data_show .desc {
+  width: 20em;
+  display: inline-block;
+}
+/* line 52, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.event_new .inputs .datetime_select, .event_new .data_show .datetime_select, .event_edit .inputs .datetime_select, .event_edit .data_show .datetime_select, .event_show .inputs .datetime_select, .event_show .data_show .datetime_select {
+  display: inline-block;
+  margin: 4px 0;
+  width: auto;
+}
+
+/* line 61, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.event_delete .data_show {
+  width: 54em;
+  border: 1px solid grey;
+  margin: 1em auto;
+}
+/* line 66, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.event_delete .desc {
+  width: 39em;
+  display: inline-block;
+}
+
+/* This needs to be nested to avoid namespace conflict! */
+/* line 74, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.mapdiv {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  width: 58%;
+  height: 375px;
+  /*	background-color: lightgrey;*/
+}
+/* line 81, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.mapdiv #maptop {
+  display: block;
+  height: 1.5em;
+  margin-bottom: .5em;
+}
+/* line 86, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+.mapdiv #mapbottom {
+  display: block;
+  height: 380px;
+}
+
+/* line 92, d:/devel/www/drivewhere/app/assets/stylesheets/events.css.scss */
+#submit_div {
+  margin-top: 1em;
+}
+
+/* line 5, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+input:not([type=submit]), textarea, select {
+  margin: 4px 0;
+  width: 20em;
+  /*	display: inline-block;*/
+  display: block;
+  *display: block;
+  zoom: 1;
+}
+
+/* line 14, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+input[type=checkbox] {
+  width: 1em;
+  display: inline;
+}
+
+/* line 19, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+input[type=submit], button {
+  display: block;
+  min-width: 6px;
+  padding: 2px 3em;
+}
+
+/* line 26, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+.login {
+  width: 500px;
+  margin: 0 auto;
+  /*	border: 1px solid black;*/
+}
+/* line 31, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+.login label {
+  float: left;
+  text-align: right;
+  padding-right: .5em;
+  width: 8em;
+}
+/* line 37, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+.login label:after {
+  content: ":";
+}
+/* line 42, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+.login input:not([type=submit]), .login select, .login textarea {
+  display: block;
+  margin: 4px 0;
+  width: 20em;
+}
+/* line 49, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+.login input[type=submit],
+.login button {
+  display: block;
+  width: 150px;
+  margin: 5px auto;
+}
+/* line 55, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+.login ul {
+  margin-top: 3em;
+}
+/* line 57, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+.login ul li {
+  list-style-type: none;
+}
+
+/* line 64, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+.main_page .choices {
+  text-align: center;
+}
+/* line 66, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+.main_page .choices a {
+  margin: 5px 0;
+  padding: 5px 0;
+  width: 200px;
+}
+/* line 71, d:/devel/www/drivewhere/app/assets/stylesheets/access.css.scss */
+.main_page .choices ul {
+  padding: 0;
+}
+
+/* line 5, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.data_edit {
+  width: 50%;
+}
+/* line 8, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.data_edit label {
+  width: 12em;
+}
+/* line 12, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.data_edit input:not([type=submit]), .data_edit textarea, .data_edit select {
+  width: 20em;
+  display: block;
+  *display: block;
+  zoom: 1;
+}
+/* line 19, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.data_edit input[type=checkbox] {
+  width: 1em;
+  display: inline;
+}
+/* line 24, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.data_edit input[type=submit], .data_edit button {
+  display: block;
+  min-width: 6px;
+  padding: 2px 3em;
+}
+/* line 30, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.data_edit li {
+  margin: 2px 0;
+}
+/* line 34, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.data_edit .datetime_select {
+  display: inline-block;
+  margin: 4px 0;
+  width: auto;
+}
+
+/* line 42, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.owner_edit {
+  margin-bottom: 1em;
+}
+
+/* line 47, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.owner_show .data_show, .owner_delete .data_show, .owner_index .data_show {
+  width: 45%;
+  border: 1px solid black;
+  margin: 1em auto;
+}
+/* line 51, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.owner_show .data_show ul, .owner_delete .data_show ul, .owner_index .data_show ul {
+  padding: 0;
+}
+/* line 54, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.owner_show .data_show ul li label, .owner_delete .data_show ul li label, .owner_index .data_show ul li label {
+  width: 14em;
+}
+/* line 57, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.owner_show .data_show ul li span, .owner_delete .data_show ul li span, .owner_index .data_show ul li span {
+  display: inline-block;
+  width: 30em;
+}
+/* line 64, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.owner_show .data_table, .owner_delete .data_table, .owner_index .data_table {
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 67, d:/devel/www/drivewhere/app/assets/stylesheets/owners.css.scss */
+.owner_show .data_table .desc, .owner_delete .data_table .desc, .owner_index .data_table .desc {
+  width: 20em;
+  display: inline-block;
+}
+
+/* line 10, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+#content #content_map .maparea .mapdiv {
+  width: 100%;
+  height: 100%;
+}
+/* line 15, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+#content #content_map .sidebar {
+  border: 1px solid grey;
+  padding: 20px;
+  background-color: white;
+  width: 200px;
+  position: absolute;
+  height: 99%;
+  right: -1294px;
+  /* Note: Set as left/right/top/left based on tabSlieOut option selected */
+}
+/* line 23, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+#content #content_map .sidebar ul {
+  width: 160px;
+  padding: 10px;
+  margin: 0;
+}
+/* line 31, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+#content #content_events {
+  margin-right: 8px;
+}
+/* line 35, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+#content #content_report {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 15, D:/devel/Ruby200/lib/ruby/gems/2.0.0/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
+#content #content_report:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 39, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+#content #content_report #input_area #report_form {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+}
+/* line 38, D:/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
+#content #content_report #input_area #report_form:last-child {
+  margin-right: 0;
+}
+/* line 41, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+#content #content_report #input_area #report_form #submit_div {
+  width: 150px;
+  margin: 2em auto;
+}
+/* line 47, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+#content #content_report #input_area #report_map_content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+  margin-right: 0;
+  /* margin: 0 */
+}
+/* line 38, D:/devel/Ruby200/lib/ruby/gems/2.0.0/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
+#content #content_report #input_area #report_map_content:last-child {
+  margin-right: 0;
+}
+/* line 54, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+#content #content_report #input_area #report_map_content .report_map {
+  width: 100%;
+  height: 400px;
+}
+
+/* Menu */
+/* line 67, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+.tabs {
+  padding: 0.3em 0;
+  background-image: -webkit-linear-gradient(bottom, #cfcfcf, #e5e5e5, transparent 100%);
+  background-image: linear-gradient(to top, #cfcfcf, #e5e5e5, transparent 100%);
+  margin-bottom: .5em;
+}
+
+/* line 73, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+.tab_item {
+  padding: 0.3em 1em;
+  border-right: 2px solid #c7c6c6;
+  font-weight: bold;
+}
+/* line 77, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+.tab_item:hover {
+  border-bottom: 4px solid red;
+}
+
+/* line 82, d:/devel/www/drivewhere/app/assets/stylesheets/public.css.scss */
+.tab_active {
+  border-bottom: 4px solid black;
+}
+
+/* line 7, d:/devel/www/drivewhere/app/assets/stylesheets/users.css.scss */
+.data_edit {
+  width: 500px;
+}
+/* line 10, d:/devel/www/drivewhere/app/assets/stylesheets/users.css.scss */
+.data_edit input:not([type=submit]), .data_edit textarea, .data_edit select {
+  width: 20em;
+  display: block;
+  *display: block;
+  zoom: 1;
+}
+/* line 17, d:/devel/www/drivewhere/app/assets/stylesheets/users.css.scss */
+.data_edit input[type=checkbox] {
+  width: 1em;
+  display: inline;
+}
+/* line 22, d:/devel/www/drivewhere/app/assets/stylesheets/users.css.scss */
+.data_edit input[type=submit], .data_edit button {
+  display: block;
+  min-width: 6px;
+  padding: 2px 3em;
+}
+/* line 28, d:/devel/www/drivewhere/app/assets/stylesheets/users.css.scss */
+.data_edit li {
+  margin: 2px 0;
+}
+/* line 32, d:/devel/www/drivewhere/app/assets/stylesheets/users.css.scss */
+.data_edit .datetime_select {
+  display: inline-block;
+  margin: 4px 0;
+  width: auto;
+}
+
+/* line 39, d:/devel/www/drivewhere/app/assets/stylesheets/users.css.scss */
+#resetpwd_div {
+  width: 300px;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+/* line 49, d:/devel/www/drivewhere/app/assets/stylesheets/users.css.scss */
+.user_show .data_show, .user_delete .data_show, .user_index .data_show {
+  width: 35%;
+  margin: 1em auto;
+  border: 1px solid black;
+}
+/* line 54, d:/devel/www/drivewhere/app/assets/stylesheets/users.css.scss */
+.user_show .data_table, .user_delete .data_table, .user_index .data_table {
+  width: 55%;
+  margin: 0 auto;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+/* line 25, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+body, html {
+  font: normal 12px verdana;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 33, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+h2 {
+  text-align: center;
+  color: black;
+  margin: 1em 0 1em 0;
+  /*	background-color: rgb(105, 105, 105);*/
+}
+
+/* line 40, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.hidden {
+  display: none !important;
+}
+
+/* line 42, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.debug {
+  display: none;
+}
+
+/* line 44, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#flash_div {
+  margin-bottom: .5em;
+}
+/* line 46, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#flash_div .error {
+  background-color: red;
+  color: white;
+  padding: .25em 1em;
+}
+/* line 50, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#flash_div .error:before {
+  content: "ERROR: ";
+  font-weight: bold;
+}
+/* line 55, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#flash_div .warning {
+  background-color: #fffa8c;
+  color: black;
+  padding: .25em 1em;
+}
+/* line 59, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#flash_div .warning:before {
+  content: "WARNING: ";
+  font-weight: bold;
+}
+/* line 64, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#flash_div .notice {
+  background-color: #beefff;
+  color: black;
+  padding: .25em 1em;
+}
+/* line 68, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#flash_div .notice:before {
+  content: "NOTICE: ";
+  font-weight: bold;
+}
+
+/* line 75, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#content {
+  clear: both;
+  margin: 8px;
+}
+
+/* line 80, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.banner {
+  width: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 56px;
+}
+
+/* line 90, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.menu .action_links {
+  background-image: -webkit-linear-gradient(bottom, #cfcfcf, #e5e5e5, transparent 100%);
+  background-image: linear-gradient(to top, #cfcfcf, #e5e5e5, transparent 100%);
+  padding: 0.5em 0;
+}
+/* line 93, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.menu .action_links .action_ {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+/* line 98, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.menu .action_links .action_:hover {
+  background-color: #e9e9e9;
+}
+
+/* line 106, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.login_as {
+  /* Msg of who you are logged in as */
+  float: right;
+  width: 500px;
+  height: 1em;
+  margin-top: 2em;
+}
+
+/* line 114, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+label {
+  float: left;
+  text-align: right;
+  padding-right: .5em;
+  width: 9em;
+}
+/* line 120, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+label:after {
+  content: ":";
+}
+
+/* line 125, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.width_50_precent {
+  width: 50%;
+}
+
+/* line 129, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.width_150 {
+  width: 150px;
+}
+
+/* line 133, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.width_250 {
+  width: 250px;
+}
+
+/* line 137, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.center {
+  margin: auto;
+}
+
+/* line 142, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+ul li {
+  list-style-type: none;
+  margin-bottom: .5em;
+}
+
+/* Table on index pages */
+/* line 149, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+table.listing {
+  border-width: 1px;
+  border-spacing: 0px;
+  border-style: outset;
+  border-color: black;
+  border-collapse: collapse;
+  border-bottom: solid 2px grey;
+  width: 100%;
+  margin-top: .5em;
+}
+/* line 158, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+table.listing th {
+  border-width: 1px;
+  padding: 1px;
+  border-style: inset;
+  background-color: lightgray;
+  color: black;
+  border-color: grey;
+  -moz-border-radius: 0;
+  padding: 0px 3px;
+}
+/* line 168, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+table.listing td {
+  border-width: 1px;
+  padding: 1px;
+  border-style: inset;
+  border-color: grey;
+  -moz-border-radius: 0;
+  padding: 0px 3px;
+}
+/* line 176, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+table.listing .active_true {
+  background-color: lightgreen;
+}
+/* line 179, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+table.listing .active_false {
+  background-color: red;
+  color: white;
+}
+
+/* line 185, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.odd {
+  /* Zebra stripes */
+  background-color: #def;
+  border-bottom: solid 1px #def;
+}
+
+/* line 189, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.even {
+  padding-bottom: 1px;
+  border-bottom: solid 1px #def;
+}
+
+/* line 195, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#found {
+  /* Num recs found msg for index pages */
+  margin-top: 10px;
+  display: inline;
+  zoom: 1;
+}
+
+/* line 201, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.add_new {
+  float: right;
+}
+
+/* line 205, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.linkBtn {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: #cafffc;
+  padding: 2px 5px;
+  text-decoration: none;
+  font-family: arial;
+  font-size: small;
+  text-align: center;
+  margin: .5em auto;
+}
+
+/* Validation errors */
+/* line 223, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.field_with_errors label {
+  color: red;
+}
+/* line 225, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.field_with_errors label:after {
+  /*			content: " >>";*/
+}
+/* line 229, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+.field_with_errors input:not([type=submit]), .field_with_errors select, .field_with_errors textarea {
+  background-color: yellow;
+}
+
+/* Msg for validation errors */
+/* line 235, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#errorExplanation {
+  margin: 0 auto;
+  font-size: 12px;
+  border: solid 1px red;
+  width: 400px;
+}
+/* line 240, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#errorExplanation h2 {
+  width: 380px;
+  margin: 0 auto;
+  text-align: center;
+  padding: .3em 10px;
+  font-size: 12px;
+  background-color: red;
+  color: white;
+}
+/* line 249, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#errorExplanation p {
+  margin: .1em 10px;
+}
+/* line 252, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#errorExplanation ul {
+  margin: 0 10px .5em 0;
+}
+/* line 254, d:/devel/www/drivewhere/app/assets/stylesheets/application.css.scss */
+#errorExplanation ul li {
+  list-style: square;
+}
